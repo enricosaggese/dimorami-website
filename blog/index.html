@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Ristrutturazione intelligente | DIMORAMI</title>
+  <meta name="description" content="Articoli tecnici su ristrutturazione, preventivi, bagno, ceramiche e coordinamento cantieri. Consigli pratici da chi fa questo di mestiere da 20 anni.">
+  <link rel="canonical" href="https://dimorami.it/blog/">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">DIMORAMI<span class="nav-dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="/metodo.html">Metodo</a></li>
+    <li><a href="/servizi.html">Servizi</a></li>
+    <li><a href="/chi-sono.html">Chi sono</a></li>
+    <li><a href="/contatti.html">Contatti</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+  </ul>
+  <a href="/audit-digitale.html" class="nav-cta">Audit Digitale <span class="nav-cta-price">€199</span></a>
+</nav>
+
+<div class="page-header">
+  <p class="page-header-label">Blog · Ristrutturazione Intelligente</p>
+  <h1 class="page-header-title">Consigli tecnici<br><em>da chi fa questo da 20 anni.</em></h1>
+  <p class="page-header-sub">Preventivi, materiali, cantieri, errori da evitare. Articoli pratici scritti da Enrico Saggese, fondatore di DIMORAMI.</p>
+</div>
+
+<section class="section">
+  <div class="grid-3">
+    <!-- Articolo placeholder 1 -->
+    <article class="card">
+      <p class="card-tag" style="margin-bottom:8px;">Preventivi · 5 min lettura</p>
+      <h2 class="card-title" style="font-size:20px;"><a href="/blog/errori-preventivo-bagno.html" style="text-decoration:none;color:inherit;">Le 7 voci che mancano quasi sempre nel preventivo del bagno</a></h2>
+      <p class="card-body" style="margin-top:10px;">Smaltimento materiali, protezione pavimenti, ritocchi finali: le voci assenti che trasformano un preventivo "basso" in una sorpresa costosa.</p>
+      <a href="/blog/errori-preventivo-bagno.html" class="btn btn-ghost" style="margin-top:20px;font-size:11px;">Leggi l'articolo</a>
+    </article>
+    <!-- Articolo placeholder 2 -->
+    <article class="card">
+      <p class="card-tag" style="margin-bottom:8px;">Materiali · 7 min lettura</p>
+      <h2 class="card-title" style="font-size:20px;"><a href="/blog/formato-grandi-lastre-bagno.html" style="text-decoration:none;color:inherit;">Grandi lastre nel bagno: quando convengono davvero e quando no</a></h2>
+      <p class="card-body" style="margin-top:10px;">Il formato 120×240 è esteticamente superiore, ma ha implicazioni strutturali, di posa e di costo che il tuo preventivo probabilmente non dice.</p>
+      <a href="/blog/formato-grandi-lastre-bagno.html" class="btn btn-ghost" style="margin-top:20px;font-size:11px;">Leggi l'articolo</a>
+    </article>
+    <!-- Articolo placeholder 3 -->
+    <article class="card">
+      <p class="card-tag" style="margin-bottom:8px;">Cantiere · 6 min lettura</p>
+      <h2 class="card-title" style="font-size:20px;"><a href="/blog/umidita-bagno-cause-soluzioni.html" style="text-decoration:none;color:inherit;">Umidità nel bagno: le 4 cause reali e come risolverle davvero</a></h2>
+      <p class="card-body" style="margin-top:10px;">Muffa che torna dopo pochi mesi? Quasi sempre il problema non è la ventilazione ma la stratigrafia della parete. Ecco come diagnosticarla.</p>
+      <a href="/blog/umidita-bagno-cause-soluzioni.html" class="btn btn-ghost" style="margin-top:20px;font-size:11px;">Leggi l'articolo</a>
+    </article>
+  </div>
+  <div style="text-align:center;margin-top:60px;padding-top:40px;border-top:1px solid rgba(140,106,67,.1);">
+    <p style="font-size:14px;color:var(--text-mid);margin-bottom:20px;">Vuoi ricevere i nuovi articoli direttamente?</p>
+    <a href="/bagno-senza-errori.html" class="btn btn-trav">Scarica la guida gratuita →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div><div class="footer-brand">DIMORAMI</div><p class="footer-tagline">Il tuo spazio diventa dimora.</p></div>
+  <div><p class="footer-col-title">Servizi</p><ul class="footer-links"><li><a href="/audit-digitale.html">Audit Digitale</a></li><li><a href="/servizi.html">Tutti i servizi</a></li></ul></div>
+  <div><p class="footer-col-title">Pagine</p><ul class="footer-links"><li><a href="/metodo.html">Il Metodo</a></li><li><a href="/chi-sono.html">Chi sono</a></li><li><a href="/contatti.html">Contatti</a></li></ul></div>
+  <div><p class="footer-col-title">Contatti</p><ul class="footer-links"><li><a href="mailto:enrico@dimorami.it">enrico@dimorami.it</a></li><li><a href="https://instagram.com/dimorami">@dimorami</a></li></ul></div>
+</footer>
+<div class="footer-bar">
+  <p>© 2026 DIMORAMI · Enrico Saggese</p>
+  <p>dimorami.it</p>
+</div>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
+document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
