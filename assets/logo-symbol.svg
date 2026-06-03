@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DIMORAMI — Simbolo Isolato
+  Sfondo trasparente — uso: favicon, avatar social, timbro, wax seal
+  Versione: 1.0 — Giugno 2026
+
+  NOTA MICRO: sotto 16px usare fill="#2C1F16" invece di #4A3020
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 280 280"
+  width="280"
+  height="280"
+  role="img"
+  aria-label="DIMORAMI — simbolo D">
+
+  <title>DIMORAMI Simbolo</title>
+
+  <!-- Sfondo trasparente — nessun rect di sfondo -->
+
+  <!-- ═══ COSTRUZIONE — R=110, r=85, centro (140,140) ═══ -->
+
+  <circle cx="140" cy="140" r="110"
+    fill="none" stroke="#8C6A43" stroke-width="1.1" opacity="0.68"/>
+  <circle cx="140" cy="140" r="85"
+    fill="none" stroke="#8C6A43" stroke-width="0.85"
+    stroke-dasharray="4,6" opacity="0.55"/>
+  <circle cx="140" cy="140" r="68"
+    fill="none" stroke="#8C6A43" stroke-width="0.45"
+    stroke-dasharray="1.5,5" opacity="0.28"/>
+
+  <line x1="16" y1="140" x2="264" y2="140" stroke="#8C6A43" stroke-width="0.7"  opacity="0.50"/>
+  <line x1="140" y1="16" x2="140" y2="264" stroke="#8C6A43" stroke-width="0.7"  opacity="0.50"/>
+  <line x1="30" y1="16" x2="30" y2="264"   stroke="#8C6A43" stroke-width="0.55" stroke-dasharray="2.5,5" opacity="0.36"/>
+  <line x1="52" y1="24" x2="52" y2="264"   stroke="#8C6A43" stroke-width="0.42" stroke-dasharray="1.5,5" opacity="0.24"/>
+  <line x1="140" y1="140" x2="250" y2="140" stroke="#8C6A43" stroke-width="0.5" opacity="0.34"/>
+
+  <text x="188" y="135"
+    font-family="Georgia, serif" font-size="11"
+    fill="#8C6A43" opacity="0.60" font-style="italic">R</text>
+  <text x="164" y="135"
+    font-family="Georgia, serif" font-size="9"
+    fill="#8C6A43" opacity="0.44" font-style="italic">r</text>
+
+  <!-- Croce centro -->
+  <line x1="129" y1="140" x2="151" y2="140" stroke="#8C6A43" stroke-width="2.0" opacity="0.82"/>
+  <line x1="140" y1="129" x2="140" y2="151" stroke="#8C6A43" stroke-width="2.0" opacity="0.82"/>
+
+  <!-- Punti chiave -->
+  <circle cx="140" cy="140" r="3.2" fill="#8C6A43" opacity="0.80"/>
+  <circle cx="140" cy="30"  r="3.0" fill="#8C6A43" opacity="0.65"/>
+  <circle cx="140" cy="250" r="3.0" fill="#8C6A43" opacity="0.65"/>
+  <circle cx="250" cy="140" r="3.0" fill="#8C6A43" opacity="0.65"/>
+  <circle cx="30"  cy="140" r="3.0" fill="#8C6A43" opacity="0.62"/>
+  <circle cx="140" cy="55"  r="2.4" fill="#8C6A43" opacity="0.52"/>
+  <circle cx="140" cy="225" r="2.4" fill="#8C6A43" opacity="0.52"/>
+  <circle cx="225" cy="140" r="2.2" fill="#8C6A43" opacity="0.45"/>
+
+  <!-- Tacche -->
+  <line x1="132" y1="30"  x2="148" y2="30"  stroke="#8C6A43" stroke-width="1.3" opacity="0.65"/>
+  <line x1="132" y1="250" x2="148" y2="250" stroke="#8C6A43" stroke-width="1.3" opacity="0.65"/>
+  <line x1="132" y1="55"  x2="148" y2="55"  stroke="#8C6A43" stroke-width="1.0" opacity="0.50"/>
+  <line x1="132" y1="225" x2="148" y2="225" stroke="#8C6A43" stroke-width="1.0" opacity="0.50"/>
+  <line x1="30"  y1="132" x2="30"  y2="148" stroke="#8C6A43" stroke-width="1.3" opacity="0.62"/>
+  <line x1="250" y1="132" x2="250" y2="148" stroke="#8C6A43" stroke-width="1.3" opacity="0.62"/>
+  <line x1="52"  y1="134" x2="52"  y2="146" stroke="#8C6A43" stroke-width="0.9" opacity="0.44"/>
+
+  <!-- Archi compasso -->
+  <path d="M 105,34 A 38,38 0 0 1 175,34"  fill="none" stroke="#8C6A43" stroke-width="0.65" opacity="0.34"/>
+  <path d="M 105,246 A 38,38 0 0 0 175,246" fill="none" stroke="#8C6A43" stroke-width="0.65" opacity="0.34"/>
+  <path d="M 111,57 A 30,30 0 0 1 169,57"  fill="none" stroke="#8C6A43" stroke-width="0.48" opacity="0.22"/>
+  <path d="M 111,223 A 30,30 0 0 0 169,223" fill="none" stroke="#8C6A43" stroke-width="0.48" opacity="0.22"/>
+
+  <!-- ═══ SIMBOLO D ═══ -->
+  <!-- R=110, r=85, D top=30, D bottom=250, D left=30 -->
+  <!-- Counter top=55, Counter bottom=225, Stem right=52 -->
+  <path
+    fill-rule="evenodd"
+    fill="#4A3020"
+    d="M 30,30
+       L 140,30
+       A 110,110 0 0 1 140,250
+       L 30,250
+       Z
+       M 140,55
+       A 85,85 0 0 1 140,225
+       L 52,225
+       L 52,55
+       Z"/>
+
+</svg>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DIMORAMI — Logo Versione Dark
+  Variante: Calce su Lava
+  Versione: 1.0 — Giugno 2026
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 500"
+  width="400"
+  height="500"
+  role="img"
+  aria-label="DIMORAMI — Premium Renovation Advisory">
+
+  <title>DIMORAMI Logo — Dark</title>
+  <desc>Logo DIMORAMI versione dark: simbolo in Calce su sfondo Lava</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Sfondo Lava -->
+  <rect width="400" height="500" fill="#171717"/>
+
+  <!-- ═══ LINEE DI COSTRUZIONE — TRAVERTINO su scuro ═══ -->
+
+  <circle cx="200" cy="175" r="115"
+    fill="none" stroke="#8C6A43" stroke-width="1.0" opacity="0.72"/>
+  <circle cx="200" cy="175" r="89"
+    fill="none" stroke="#8C6A43" stroke-width="0.8"
+    stroke-dasharray="4,6" opacity="0.58"/>
+  <circle cx="200" cy="175" r="71"
+    fill="none" stroke="#8C6A43" stroke-width="0.45"
+    stroke-dasharray="1.5,5" opacity="0.30"/>
+
+  <line x1="20" y1="175" x2="380" y2="175"
+    stroke="#8C6A43" stroke-width="0.7" opacity="0.52"/>
+  <line x1="200" y1="22" x2="200" y2="315"
+    stroke="#8C6A43" stroke-width="0.7" opacity="0.52"/>
+  <line x1="85" y1="22" x2="85" y2="315"
+    stroke="#8C6A43" stroke-width="0.55"
+    stroke-dasharray="2.5,5" opacity="0.38"/>
+  <line x1="109" y1="50" x2="109" y2="315"
+    stroke="#8C6A43" stroke-width="0.42"
+    stroke-dasharray="1.5,5" opacity="0.25"/>
+  <line x1="200" y1="175" x2="315" y2="175"
+    stroke="#8C6A43" stroke-width="0.55" opacity="0.38"/>
+
+  <text x="252" y="170"
+    font-family="Georgia, serif" font-size="10"
+    fill="#8C6A43" opacity="0.65" font-style="italic">R</text>
+  <text x="232" y="170"
+    font-family="Georgia, serif" font-size="8.5"
+    fill="#8C6A43" opacity="0.48" font-style="italic">r</text>
+
+  <line x1="190" y1="175" x2="210" y2="175"
+    stroke="#8C6A43" stroke-width="1.8" opacity="0.85"/>
+  <line x1="200" y1="165" x2="200" y2="185"
+    stroke="#8C6A43" stroke-width="1.8" opacity="0.85"/>
+
+  <circle cx="200" cy="175" r="3.0" fill="#8C6A43" opacity="0.82"/>
+  <circle cx="200" cy="60"  r="2.8" fill="#8C6A43" opacity="0.68"/>
+  <circle cx="200" cy="290" r="2.8" fill="#8C6A43" opacity="0.68"/>
+  <circle cx="315" cy="175" r="2.8" fill="#8C6A43" opacity="0.68"/>
+  <circle cx="85"  cy="175" r="2.8" fill="#8C6A43" opacity="0.65"/>
+  <circle cx="200" cy="86"  r="2.2" fill="#8C6A43" opacity="0.55"/>
+  <circle cx="200" cy="264" r="2.2" fill="#8C6A43" opacity="0.55"/>
+
+  <line x1="193" y1="60"  x2="207" y2="60"  stroke="#8C6A43" stroke-width="1.2" opacity="0.68"/>
+  <line x1="194" y1="86"  x2="206" y2="86"  stroke="#8C6A43" stroke-width="0.95" opacity="0.52"/>
+  <line x1="194" y1="264" x2="206" y2="264" stroke="#8C6A43" stroke-width="0.95" opacity="0.52"/>
+  <line x1="193" y1="290" x2="207" y2="290" stroke="#8C6A43" stroke-width="1.2" opacity="0.68"/>
+  <line x1="85"  y1="168" x2="85"  y2="182" stroke="#8C6A43" stroke-width="1.2" opacity="0.65"/>
+  <line x1="315" y1="168" x2="315" y2="182" stroke="#8C6A43" stroke-width="1.2" opacity="0.65"/>
+
+  <path d="M 168,64 A 34,34 0 0 1 232,64"
+    fill="none" stroke="#8C6A43" stroke-width="0.6" opacity="0.36"/>
+  <path d="M 168,286 A 34,34 0 0 0 232,286"
+    fill="none" stroke="#8C6A43" stroke-width="0.6" opacity="0.36"/>
+
+  <!-- ═══ SIMBOLO D — CALCE #F5F1EA su scuro ═══ -->
+  <path
+    fill-rule="evenodd"
+    fill="#F5F1EA"
+    d="M 85,60
+       L 200,60
+       A 115,115 0 0 1 200,290
+       L 85,290
+       Z
+       M 200,86
+       A 89,89 0 0 1 200,264
+       L 109,264
+       L 109,86
+       Z"/>
+
+  <!-- ═══ WORDMARK — Calce su scuro ═══ -->
+  <text
+    x="200" y="362"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Cormorant', Georgia, serif"
+    font-weight="300"
+    font-size="23"
+    letter-spacing="9"
+    textLength="230"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#F5F1EA">DIMORAMI</text>
+
+  <line x1="85" y1="375" x2="315" y2="375"
+    stroke="#8C6A43" stroke-width="0.6" opacity="0.65"/>
+
+  <!-- Tagline su scuro: Calce chiaro per leggibilità -->
+  <text
+    x="200" y="393"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-weight="300"
+    font-size="9.5"
+    textLength="230"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#F5F1EA"
+    opacity="0.72">PREMIUM RENOVATION ADVISORY</text>
+
+</svg>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DIMORAMI — Logo Orizzontale
+  Uso: header sito, firma email, intestazioni documenti
+  Versione: 1.0 — Giugno 2026
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 560 160"
+  width="560"
+  height="160"
+  role="img"
+  aria-label="DIMORAMI — Premium Renovation Advisory">
+
+  <title>DIMORAMI Logo Orizzontale</title>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Sfondo Calce -->
+  <rect width="560" height="160" fill="#F5F1EA"/>
+
+  <!-- ═══ SIMBOLO — centro (80,80), R=68, r=52 ═══ -->
+
+  <!-- Cerchio esterno -->
+  <circle cx="80" cy="80" r="68"
+    fill="none" stroke="#8C6A43" stroke-width="0.85" opacity="0.66"/>
+  <!-- Cerchio interno -->
+  <circle cx="80" cy="80" r="52"
+    fill="none" stroke="#8C6A43" stroke-width="0.7"
+    stroke-dasharray="3.5,5.5" opacity="0.52"/>
+  <!-- Cerchio aurea -->
+  <circle cx="80" cy="80" r="42"
+    fill="none" stroke="#8C6A43" stroke-width="0.4"
+    stroke-dasharray="1.5,4.5" opacity="0.26"/>
+
+  <!-- Assi -->
+  <line x1="5"  y1="80" x2="155" y2="80" stroke="#8C6A43" stroke-width="0.65" opacity="0.48"/>
+  <line x1="80" y1="5"  x2="80"  y2="155" stroke="#8C6A43" stroke-width="0.65" opacity="0.48"/>
+  <line x1="12" y1="5"  x2="12"  y2="155" stroke="#8C6A43" stroke-width="0.5"  stroke-dasharray="2,4" opacity="0.32"/>
+
+  <!-- Croce centro -->
+  <line x1="72" y1="80" x2="88" y2="80" stroke="#8C6A43" stroke-width="1.5" opacity="0.80"/>
+  <line x1="80" y1="72" x2="80" y2="88" stroke="#8C6A43" stroke-width="1.5" opacity="0.80"/>
+
+  <!-- Punti chiave -->
+  <circle cx="80" cy="80"  r="2.5" fill="#8C6A43" opacity="0.78"/>
+  <circle cx="80" cy="12"  r="2.2" fill="#8C6A43" opacity="0.62"/>
+  <circle cx="80" cy="148" r="2.2" fill="#8C6A43" opacity="0.62"/>
+  <circle cx="148" cy="80" r="2.2" fill="#8C6A43" opacity="0.62"/>
+  <circle cx="12"  cy="80" r="2.2" fill="#8C6A43" opacity="0.58"/>
+  <circle cx="80" cy="28"  r="1.8" fill="#8C6A43" opacity="0.50"/>
+  <circle cx="80" cy="132" r="1.8" fill="#8C6A43" opacity="0.50"/>
+
+  <!-- Tacche -->
+  <line x1="74" y1="12"  x2="86" y2="12"  stroke="#8C6A43" stroke-width="1.0" opacity="0.62"/>
+  <line x1="74" y1="148" x2="86" y2="148" stroke="#8C6A43" stroke-width="1.0" opacity="0.62"/>
+  <line x1="74" y1="28"  x2="86" y2="28"  stroke="#8C6A43" stroke-width="0.8" opacity="0.46"/>
+  <line x1="74" y1="132" x2="86" y2="132" stroke="#8C6A43" stroke-width="0.8" opacity="0.46"/>
+  <line x1="12"  y1="74" x2="12"  y2="86" stroke="#8C6A43" stroke-width="1.0" opacity="0.58"/>
+  <line x1="148" y1="74" x2="148" y2="86" stroke="#8C6A43" stroke-width="1.0" opacity="0.58"/>
+
+  <!-- Archi compasso -->
+  <path d="M 56,15 A 26,26 0 0 1 104,15"  fill="none" stroke="#8C6A43" stroke-width="0.55" opacity="0.30"/>
+  <path d="M 56,145 A 26,26 0 0 0 104,145" fill="none" stroke="#8C6A43" stroke-width="0.55" opacity="0.30"/>
+
+  <!-- D — #4A3020, R=68, r=52, stem=14px -->
+  <!-- D top: 80-68=12, D bottom: 80+68=148, D left: 80-68=12 -->
+  <!-- Counter top: 80-52=28, Counter bottom: 80+52=132, Stem right: 12+14=26 -->
+  <path
+    fill-rule="evenodd"
+    fill="#4A3020"
+    d="M 12,12 L 80,12 A 68,68 0 0 1 80,148 L 12,148 Z
+       M 80,28 A 52,52 0 0 1 80,132 L 26,132 L 26,28 Z"/>
+
+  <!-- ═══ WORDMARK — a destra, allineato verticalmente ═══ -->
+
+  <!-- Linea separatrice verticale -->
+  <line x1="178" y1="38" x2="178" y2="122"
+    stroke="#8C6A43" stroke-width="0.6" opacity="0.45"/>
+
+  <!-- DIMORAMI — textLength fissa la larghezza a 178px -->
+  <text
+    x="200" y="74"
+    text-anchor="start"
+    font-family="'Cormorant Garamond', 'Cormorant', Georgia, serif"
+    font-weight="300"
+    font-size="26"
+    letter-spacing="10"
+    textLength="136"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#4A3020">DIMORAMI</text>
+
+  <!-- Separatore — larghezza del simbolo D (136px) -->
+  <line x1="200" y1="86" x2="336" y2="86"
+    stroke="#8C6A43" stroke-width="0.5" opacity="0.52"/>
+
+  <!-- Tagline — stessa larghezza del simbolo -->
+  <text
+    x="200" y="101"
+    text-anchor="start"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-weight="300"
+    font-size="9.5"
+    textLength="136"
+    lengthAdjust="spacingAndGlyphs"
+    fill="#8C6A43">PREMIUM RENOVATION ADVISORY</text>
+
+</svg>
