@@ -7,30 +7,35 @@
   <meta name="description" content="Advisory e coordinamento cantieri. Analisi preventivi in 48h da remoto. Presidio fisico ai Castelli Romani e Roma Sud. Il tuo spazio diventa dimora.">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/favicon-64.png">
   <style>
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
+      min-height: 90vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.3fr 0.7fr;
       padding-top: 72px;
     }
     .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px var(--px) 80px clamp(32px,6vw,80px);
+      padding: 72px var(--px) 72px clamp(32px,6vw,80px);
       background: var(--white);
     }
     .hero-right {
       position: relative;
       overflow: hidden;
+      min-height: 480px;
     }
     .hero-right img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 38%;
       display: block;
     }
     .hero-right-overlay {
@@ -72,9 +77,9 @@
     .hero-line { width: 24px; height: 1px; background: var(--travertino); }
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(52px, 5.5vw, 82px);
+      font-size: clamp(58px, 6.5vw, 96px);
       font-weight: 300;
-      line-height: 1.04;
+      line-height: 1.02;
       color: var(--lava);
       margin-bottom: 28px;
     }
@@ -286,7 +291,10 @@
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="/" class="nav-logo">DIMORAMI<span class="nav-dot"></span></a>
+  <a href="/" class="nav-logo" aria-label="DIMORAMI — Home">
+    <img src="/assets/logo-symbol.svg" alt="" aria-hidden="true" height="32" width="32" style="display:inline-block;vertical-align:middle;margin-right:9px;">
+    <span style="vertical-align:middle;">DIMORAMI</span><span class="nav-dot" style="vertical-align:middle;"></span>
+  </a>
   <ul class="nav-links">
     <li><a href="/metodo.html">Metodo</a></li>
     <li><a href="/servizi.html">Servizi</a></li>
@@ -299,7 +307,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left" data-reveal>
+  <div class="hero-left">
     <p class="hero-eyebrow"><span class="hero-line"></span>Premium Renovation Advisory<span class="hero-line"></span></p>
     <h1>Il tuo spazio<br>diventa<br><em>dimora.</em></h1>
     <p class="hero-sub">Ristrutturare con metodo. Abitare il risultato con serenità. Consulenza e presidio di cantiere — da remoto su tutto il territorio nazionale, in presenza ai Castelli Romani e Roma Sud.</p>
@@ -408,17 +416,23 @@
     </div>
   </div>
 
-  <!-- Slider prima/dopo -->
+  <!-- Tab switcher -->
+  <div style="display:flex;gap:8px;margin-bottom:20px;" data-reveal>
+    <button onclick="switchPD(0,this)" class="pd-tab active" style="padding:9px 22px;border-radius:2px;border:1px solid rgba(140,106,67,.25);background:var(--travertino);color:var(--white);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;">Bagno · Marmo</button>
+    <button onclick="switchPD(1,this)" class="pd-tab" style="padding:9px 22px;border-radius:2px;border:1px solid rgba(140,106,67,.25);background:transparent;color:var(--text-mid);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;">Terrazzo</button>
+  </div>
+
+  <!-- Slider -->
   <div class="pd-container" id="pdContainer" data-reveal>
-    <img class="pd-after" src="/img/bagno-rovere-wide.jpg" alt="Dopo — bagno ristrutturato con Metodo DIMORA">
-    <img class="pd-before" id="pdBefore" src="/img/cantiere-salone-durante.jpg" alt="Durante — cantiere in corso">
-    <span class="pd-label pd-label-prima">Durante</span>
+    <img class="pd-after" id="pdAfter" src="/img/bagno1-dopo.jpg" alt="Dopo — bagno marmo ristrutturato con Metodo DIMORA">
+    <img class="pd-before" id="pdBefore" src="/img/bagno1-prima.jpg" alt="Prima — impianti a vista, cantiere grezzo">
+    <span class="pd-label pd-label-prima">Prima</span>
     <span class="pd-label pd-label-dopo">Dopo</span>
     <div class="pd-handle" id="pdHandle">
       <div class="pd-btn">⇔</div>
     </div>
   </div>
-  <p style="text-align:center;font-size:12px;color:var(--text-low);margin-top:16px;">Trascina il cursore per confrontare · Progetto reale DIMORAMI · Castelli Romani</p>
+  <p style="text-align:center;font-size:12px;color:var(--text-low);margin-top:16px;">Trascina il cursore per confrontare · Progetti reali DIMORAMI · Castelli Romani</p>
 </section>
 
 <!-- RENDER — PRIMA CHE INIZI -->
@@ -634,8 +648,14 @@ document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
 // Prima/Dopo slider
 const container = document.getElementById('pdContainer');
 const before = document.getElementById('pdBefore');
+const after = document.getElementById('pdAfter');
 const handle = document.getElementById('pdHandle');
 let dragging = false;
+
+const pdPairs = [
+  { before: '/img/bagno1-prima.jpg', after: '/img/bagno1-dopo.jpg' },
+  { before: '/img/terrazzo-prima.jpg', after: '/img/terrazzo-dopo.jpg' }
+];
 
 function setPos(x) {
   const r = container.getBoundingClientRect();
@@ -644,6 +664,22 @@ function setPos(x) {
   handle.style.left = pct + '%';
 }
 
+function resetSlider() {
+  before.style.clipPath = 'inset(0 50% 0 0)';
+  handle.style.left = '50%';
+}
+
+function switchPD(idx, btn) {
+  document.querySelectorAll('.pd-tab').forEach(b => {
+    b.style.background = 'transparent'; b.style.color = 'var(--text-mid)';
+  });
+  btn.style.background = 'var(--travertino)'; btn.style.color = 'var(--white)';
+  after.src = pdPairs[idx].after;
+  before.src = pdPairs[idx].before;
+  resetSlider();
+}
+
+resetSlider();
 container.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
 window.addEventListener('mousemove', e => { if(dragging) setPos(e.clientX); });
 window.addEventListener('mouseup', () => { dragging = false; });
