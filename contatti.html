@@ -7,6 +7,17 @@
   <meta name="description" content="Scrivi a Enrico Saggese per un'analisi del tuo preventivo, un sopralluogo ai Castelli Romani o una consulenza remota. Risposta entro 24 ore.">
   <link rel="canonical" href="https://dimorami.it/contatti.html">
   <link rel="stylesheet" href="/assets/style.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <!-- IUBENDA — Cookie Solution + Privacy/Cookie Policy -->
+  <script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {"siteId":4564608,"cookiePolicyId":55971286,"storage":{"useSiteId":true}};
+  _iub.csLangConfiguration = {"it":{"cookiePolicyId":55971286}};
+  </script>
+  <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4564608.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 </head>
 <body>
 
@@ -19,7 +30,7 @@
     <li><a href="/contatti.html" class="active">Contatti</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
-  <a href="/audit-digitale.html" class="nav-cta">Audit Digitale <span class="nav-cta-price">€199</span></a>
+  <a href="/audit-digitale.html" class="nav-cta">Audit Digitale <span class="nav-cta-price">€249</span></a>
 </nav>
 
 <div class="page-header">
@@ -51,17 +62,62 @@
 
         <div>
           <label style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);display:block;margin-bottom:8px;">Mi interessa</label>
-          <select name="servizio" style="width:100%;padding:14px 16px;border:1px solid rgba(140,106,67,.2);background:var(--white);font-family:'Inter',sans-serif;font-size:14px;color:var(--lava);border-radius:2px;outline:none;appearance:none;cursor:pointer;">
+          <select name="servizio" id="contatti-servizio" style="width:100%;padding:14px 16px;border:1px solid rgba(140,106,67,.2);background:var(--white);font-family:'Inter',sans-serif;font-size:14px;color:var(--lava);border-radius:2px;outline:none;appearance:none;cursor:pointer;">
             <option value="">Seleziona un servizio...</option>
-            <option value="audit-digitale">Dimora Audit Digitale — €199 (Remote)</option>
+            <option value="audit-digitale">Dimora Audit Digitale — €249 (Remote)</option>
             <option value="bagno-remote">Dimora Bagno Remote — €390–590 (Remote)</option>
-            <option value="pre-acquisto">Dimora Pre-Acquisto — €199–299 (Remote)</option>
-            <option value="audit-fisico">Dimora Audit fisico — €290–390 (On-Site)</option>
-            <option value="bagno-regia">Dimora Bagno Regia — €1.450–1.850 (On-Site)</option>
-            <option value="appartamento">Dimora Appartamento — da €3.500 (On-Site)</option>
-            <option value="advisory">Dimora Advisory / Assente / Risana (On-Site)</option>
+            <option value="pre-acquisto">Dimora Pre-Acquisto — €249 (Remote)</option>
+            <option value="living-remote">Dimora Living Remote — da €390 (Remote)</option>
+            <option value="audit-fisico" data-track="onsite">Dimora Audit fisico — €290–390 (On-Site)</option>
+            <option value="bagno-presidio" data-track="onsite">Dimora Bagno Presidio — €1.450–1.850 (On-Site)</option>
+            <option value="appartamento" data-track="onsite">Dimora Appartamento / Assente — da €2.800 (On-Site)</option>
+            <option value="risana" data-track="onsite">Dimora Risana — patologie edilizie (On-Site)</option>
             <option value="altro">Non so ancora, ho una domanda</option>
           </select>
+        </div>
+
+        <!-- CAMPI ON-SITE — visibili solo se selezionato un servizio On-Site: form basico, focus su richiesta/necessità -->
+        <div id="onsite-fields" style="display:none;flex-direction:column;gap:16px;background:var(--calce);border:1px solid rgba(140,106,67,.15);border-radius:4px;padding:20px;">
+          <p style="font-size:11px;color:var(--travertino);letter-spacing:.1em;text-transform:uppercase;">Qualche dettaglio in più, ci aiuta a risponderti meglio</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div>
+              <label class="form-label">Comune / Zona *</label>
+              <input type="text" name="onsite_zona" class="form-input" placeholder="Es. Ariccia, Albano, Marino...">
+            </div>
+            <div>
+              <label class="form-label">Tipo di intervento</label>
+              <select name="onsite_tipo_intervento" class="form-input">
+                <option value="">Seleziona...</option>
+                <option value="bagno">Ristrutturazione bagno</option>
+                <option value="cucina">Ristrutturazione cucina</option>
+                <option value="appartamento">Appartamento completo</option>
+                <option value="umidita">Umidità / infiltrazioni / impianti</option>
+                <option value="non_so">Non so ancora, vorrei un audit</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div>
+              <label class="form-label">Budget indicativo</label>
+              <select name="onsite_budget" class="form-input">
+                <option value="">Seleziona...</option>
+                <option value="under_15k">Sotto i €15.000</option>
+                <option value="15_30k">€15.000 – €30.000</option>
+                <option value="30_60k">€30.000 – €60.000</option>
+                <option value="over_60k">Oltre €60.000</option>
+                <option value="non_so">Non ancora definito</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Urgenza</label>
+              <select name="onsite_urgenza" class="form-input">
+                <option value="">Seleziona...</option>
+                <option value="subito">Voglio iniziare subito</option>
+                <option value="1_3_mesi">Nei prossimi 1–3 mesi</option>
+                <option value="oltre">Sto solo valutando, nessuna fretta</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -88,11 +144,11 @@
         </div>
       </a>
 
-      <a href="https://instagram.com/dimorami" class="card" style="text-decoration:none;display:flex;gap:18px;align-items:center;">
+      <a href="https://instagram.com/dimorami.it" class="card" style="text-decoration:none;display:flex;gap:18px;align-items:center;">
         <div style="width:48px;height:48px;border-radius:50%;background:var(--trav-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📱</div>
         <div>
           <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin-bottom:4px;">Instagram & WhatsApp</p>
-          <p style="font-size:15px;color:var(--lava);font-weight:400;">@dimorami</p>
+          <p style="font-size:15px;color:var(--lava);font-weight:400;">@dimorami.it</p>
           <p style="font-size:12px;color:var(--text-mid);">Per messaggi veloci e invio preventivi</p>
         </div>
       </a>
@@ -100,40 +156,4 @@
       <a href="https://linkedin.com/in/enricosaggese" class="card" style="text-decoration:none;display:flex;gap:18px;align-items:center;">
         <div style="width:48px;height:48px;border-radius:50%;background:var(--trav-pale);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💼</div>
         <div>
-          <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin-bottom:4px;">LinkedIn</p>
-          <p style="font-size:15px;color:var(--lava);font-weight:400;">Enrico Saggese</p>
-          <p style="font-size:12px;color:var(--text-mid);">Per collaborazioni B2B e agenzie</p>
-        </div>
-      </a>
-
-      <!-- CAL.COM EMBED PLACEHOLDER -->
-      <div style="background:var(--calce);border-radius:4px;padding:28px;border:1px solid rgba(140,106,67,.12);">
-        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--travertino);margin-bottom:12px;">Prenota un sopralluogo</p>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.65;margin-bottom:16px;">Scegli data e ora direttamente nel calendario. Disponibilità Castelli Romani e Roma Sud.</p>
-        <!-- SOSTITUIRE CON: <div style="width:100%;height:500px;"><iframe src="https://cal.com/dimorami" width="100%" height="100%" frameborder="0"></iframe></div> -->
-        <a href="https://cal.com/dimorami" class="btn btn-trav" style="width:100%;justify-content:center;">Prenota nel calendario →</a>
-      </div>
-
-      <div style="background:var(--calce);border-radius:4px;padding:24px;border:1px solid rgba(140,106,67,.12);">
-        <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin-bottom:8px;">Area operativa On-Site</p>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.65;">Ariccia · Frascati · Grottaferrata · Marino · Castel Gandolfo · Albano · Velletri · EUR · Torrino · Mostacciano</p>
-        <p style="font-size:12px;color:var(--travertino);margin-top:10px;">Remote: tutta Italia 🌐</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div><div class="footer-brand">DIMORAMI</div><p class="footer-tagline">Il tuo spazio diventa dimora.</p></div>
-  <div><p class="footer-col-title">Servizi</p><ul class="footer-links"><li><a href="/audit-digitale.html">Audit Digitale</a></li><li><a href="/servizi.html">Tutti i servizi</a></li></ul></div>
-  <div><p class="footer-col-title">Pagine</p><ul class="footer-links"><li><a href="/metodo.html">Il Metodo</a></li><li><a href="/chi-sono.html">Chi sono</a></li><li><a href="/blog/">Blog</a></li></ul></div>
-  <div><p class="footer-col-title">Contatti</p><ul class="footer-links"><li><a href="mailto:enrico@dimorami.it">enrico@dimorami.it</a></li><li><a href="https://instagram.com/dimorami">@dimorami</a></li></ul></div>
-</footer>
-<div class="footer-bar"><p>© 2026 DIMORAMI · Enrico Saggese</p><p>dimorami.it</p></div>
-
-<script>
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
-document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
-</script>
-</body>
-</html>
+          <p style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin-bottom:4px;">Li
