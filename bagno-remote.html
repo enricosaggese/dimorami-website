@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dimora Bagno Remote — €390–590 | Progetto bagno completo da remoto | DIMORAMI</title>
-  <meta name="description" content="Mandi planimetria, foto e stile. Ricevi layout 2D ottimizzato, capitolato materiali con codici prodotto e lista della spesa. Da ovunque in Italia. Da €390. 2 revisioni incluse.">
-  <link rel="canonical" href="https://dimorami.it/bagno-remote.html">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <!-- IUBENDA — Cookie Solution + Privacy/Cookie Policy -->
-  <script type="text/javascript">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bagno Remote · DIMORAMI</title>
+<meta name="description" content="Il tuo bagno progettato fino all’ultima piastrella. Interamente da remoto.">
+<link rel="canonical" href="https://dimorami.it/bagno-remote.html">
+<meta property="og:title" content="Bagno Remote · DIMORAMI">
+<meta property="og:description" content="Il tuo bagno progettato fino all’ultima piastrella. Interamente da remoto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dimorami.it/bagno-remote.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#F7F3EC;-webkit-font-smoothing:antialiased;font-family:Inter,sans-serif;color:#1A1714;min-height:100vh;}
+  a{-webkit-tap-highlight-color:transparent;}
+  ::selection{background:#8C6A43;color:#F7F3EC;}
+  @keyframes dmReveal{from{transform:translateY(16px);}to{transform:translateY(0);}}
+  [data-reveal]{animation:dmReveal .7s cubic-bezier(.2,.7,.2,1) both;}
+  @keyframes csTurn{from{opacity:0;transform:translateX(22px) rotateY(5deg);}to{opacity:1;transform:translateX(0) rotateY(0);}}
+  .dm-navlinks{display:flex;}
+  .dm-burger{display:none!important;}
+  .dm-card{transition:box-shadow .3s,transform .3s;}
+  .dm-card:hover{box-shadow:0 24px 48px -28px rgba(26,23,20,.4);transform:translateY(-3px);}
+  .dm-mobilemenu{display:none;}
+  .dm-mobilemenu.open{display:flex;}
+  .cs-page{display:none;}
+  .cs-page.active{display:flex;animation:csTurn .55s cubic-bezier(.3,.7,.2,1) both;}
+  @media(max-width:880px){
+    .dm-navlinks{display:none;}
+    .dm-burger{display:inline-flex!important;}
+    .dm-herogrid{grid-template-columns:1fr!important;}
+    .dm-2col{grid-template-columns:1fr!important;}
+    .dm-navcta{display:none;}
+  }
+  input:focus,textarea:focus,select:focus{outline:none;border-color:#8C6A43!important;}
+</style>
+<script type="text/javascript">
   var _iub = _iub || [];
   _iub.csConfiguration = {"siteId":4564608,"cookiePolicyId":55971286,"storage":{"useSiteId":true}};
   _iub.csLangConfiguration = {"it":{"cookiePolicyId":55971286}};
@@ -20,363 +51,284 @@
   <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 </head>
 <body>
-
-<nav class="nav">
-  <a href="/" class="nav-logo">DIMORAMI<span class="nav-dot"></span></a>
-  <ul class="nav-links">
-    <li><a href="/metodo.html">Metodo</a></li>
-    <li><a href="/servizi.html">Servizi</a></li>
-    <li><a href="/chi-sono.html">Chi sono</a></li>
-    <li><a href="/contatti.html">Contatti</a></li>
-    <li><a href="/blog/">Blog</a></li>
-  </ul>
-  <a href="#richiedi" class="nav-cta">Progetta il tuo bagno — <span class="nav-cta-price">da €390</span></a>
-</nav>
-
-<!-- ── HERO ── -->
-<section style="min-height:80vh;padding:calc(82px + 80px) var(--px) 80px;background:linear-gradient(155deg,var(--white) 0%,var(--trav-pale) 100%);display:flex;align-items:center;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;width:100%;" data-reveal>
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
-        <span class="badge badge-trav">🌐 Remote · Nazionale</span>
-        <span class="badge badge-lava">Consegna 5 giorni</span>
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(247,243,236,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(140,106,67,.16);">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+        <img src="assets/logo-nav.png" alt="DIMORAMI · Premium Renovation Advisory" style="height:46px;width:auto;display:block;">
+      </a>
+      <div class="dm-navlinks" style="align-items:center;gap:34px;">
+          <a href="index.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Home</a>
+          <a href="servizi.html" style="font:500 14px Inter;letter-spacing:.01em;color:#8C6A43;text-decoration:none;padding:6px 0;border-bottom:1px solid #8C6A43;">Servizi</a>
+          <a href="chi-sono.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Chi sono</a>
+          <a href="guida-bagno.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Guida Bagno</a>
+          <a href="contatti.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Contatti</a>
+          <a href="blog.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Blog</a>
       </div>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.06;color:var(--lava);margin-bottom:24px;">
-        Dimora<br><em style="font-style:italic;color:var(--travertino);">Bagno Remote</em>
-      </h1>
-      <p style="font-size:18px;line-height:1.82;color:var(--text-mid);margin-bottom:36px;max-width:440px;">
-        Mandi planimetria, foto e misure del bagno attuale. Io progetto da remoto: <strong style="font-weight:500;color:var(--lava);">layout 2D ottimizzato + capitolato materiali completo</strong>, pronto da consegnare all'impresa. Quando hai scelto i materiali reali da Polis, trasformo il preventivo in un documento brandizzato con lista della spesa finale. Due fasi, una fee unica.
-      </p>
-      <div style="display:flex;align-items:center;gap:24px;margin-bottom:16px;">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--lava);">€390–590</span>
+      <a href="audit-digitale.html" class="dm-navcta" style="display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC;font:500 13.5px Inter;letter-spacing:.01em;padding:12px 20px;border-radius:2px;text-decoration:none;">Audit Digitale · €199 <span style="color:#B8966A;">→</span></a>
+      <button id="dm-burger" class="dm-burger" aria-label="Menu" style="align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(140,106,67,.3);border-radius:2px;cursor:pointer;color:#1A1714;font-size:18px;">≡</button>
+    </div>
+  </nav>
+  <div id="dm-mobilemenu" class="dm-mobilemenu" style="position:fixed;inset:74px 0 0 0;z-index:49;background:#F7F3EC;padding:28px clamp(20px,5vw,64px);flex-direction:column;gap:6px;">
+        <a href="index.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Home</a>
+        <a href="servizi.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Servizi</a>
+        <a href="chi-sono.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Chi sono</a>
+        <a href="guida-bagno.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Guida Bagno</a>
+        <a href="contatti.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Contatti</a>
+        <a href="blog.html" style="font:300 30px \'Cormorant Garamond\',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Blog</a>
+      <a href="audit-digitale.html" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC;font:500 15px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;justify-content:center;">Inizia con l'Audit Digitale →</a>
+  </div>
+  <header style="background:#1A1714;color:#F7F3EC;">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,5vw,64px) clamp(48px,7vw,84px);">
+      <a href="servizi.html" style="font:500 13px Inter;letter-spacing:.02em;color:rgba(247,243,236,.55);text-decoration:none;">← Tutti i servizi</a>
+      <div class="dm-herogrid" style="display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,72px);align-items:end;margin-top:36px;">
         <div>
-          <div style="font-size:12px;color:var(--travertino);">Secondo complessità · Prezzo fisso</div>
-          <div style="font-size:12px;color:var(--text-low);">2 revisioni incluse · Terza €100</div>
+          <div data-reveal style="display:inline-flex;align-items:center;gap:12px;margin-bottom:24px;">
+            <span style="font:500 10px Inter;letter-spacing:.16em;text-transform:uppercase;color:#1A1714;background:#B8966A;padding:6px 12px;border-radius:2px;">Remote · Nazionale</span>
+            <span style="font:500 12px Inter;letter-spacing:.06em;color:rgba(247,243,236,.6);">Progetto completo in pochi giorni</span>
+          </div>
+          <h1 data-reveal style="margin:0 0 18px;font:300 clamp(38px,5.6vw,68px)/1.04 'Cormorant Garamond',serif;letter-spacing:-.015em;color:#F7F3EC;">Bagno Remote</h1>
+          <p data-reveal style="margin:0;max-width:520px;font:300 clamp(17px,1.5vw,20px)/1.55 'Cormorant Garamond',serif;font-style:italic;color:#D9C3A3;">Il tuo bagno progettato fino all’ultima piastrella. Interamente da remoto.</p>
+        </div>
+        <div data-reveal style="background:#2A2521;border:1px solid rgba(184,150,106,.28);border-radius:3px;padding:28px 26px;">
+          <div style="font:500 11px Inter;letter-spacing:.14em;text-transform:uppercase;color:#B8966A;">Investimento</div>
+          <div style="font:300 clamp(38px,5vw,52px) 'Cormorant Garamond',serif;color:#F7F3EC;line-height:1;margin-top:10px;">Da €390</div>
+          <div style="font:400 13px Inter;color:rgba(247,243,236,.55);margin-top:8px;">per metratura · 1 revisione inclusa (materiali) · cambio materiale extra €90 · cambio layout €149</div>
+          
+        <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(184,150,106,.22);display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;">
+            <span style="font:400 13px Inter;color:rgba(247,243,236,.6);">Fino a 5 mq</span>
+            <span style="font:500 14px Inter;color:#F7F3EC;white-space:nowrap;">€390</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;">
+            <span style="font:400 13px Inter;color:rgba(247,243,236,.6);">Da 5 a 8 mq</span>
+            <span style="font:500 14px Inter;color:#F7F3EC;white-space:nowrap;">€490</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;">
+            <span style="font:400 13px Inter;color:rgba(247,243,236,.6);">Da 8 a 12 mq</span>
+            <span style="font:500 14px Inter;color:#F7F3EC;white-space:nowrap;">€590</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;">
+            <span style="font:400 13px Inter;color:rgba(247,243,236,.6);">Oltre 12 mq</span>
+            <span style="font:500 14px Inter;color:#F7F3EC;white-space:nowrap;">Preventivo su misura</span>
+          </div>
+        </div>
+          <a href="contatti.html" style="display:flex;align-items:center;justify-content:center;gap:9px;margin-top:22px;background:#F7F3EC;color:#1A1714;font:500 14.5px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;">Richiedi questo servizio →</a>
+          <div style="font:400 12px Inter;color:rgba(247,243,236,.45);margin-top:14px;text-align:center;">Pochi giorni lavorativi · esecuzione su prenotazione</div>
         </div>
       </div>
-      <a href="#richiedi" class="btn btn-trav" style="font-size:13px;padding:16px 36px;">Inizia il tuo progetto →</a>
     </div>
-    <!-- Come funziona -->
-    <div style="display:flex;flex-direction:column;gap:2px;">
-      <div style="padding:20px 24px;background:var(--white);border-radius:3px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 12px rgba(26,23,20,.05);">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(140,106,67,.3);min-width:32px;line-height:1;">1</span>
+  </header>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,64px) clamp(20px,3vw,40px);">
+    <p data-reveal style="margin:0;max-width:820px;font:300 clamp(22px,2.6vw,32px)/1.45 'Cormorant Garamond',serif;color:#1A1714;letter-spacing:-.005em;">Mi mandi misure, foto e planimetria. Ti restituisco il layout definitivo, il capitolato dei materiali e la lista della spesa — tutto pronto da consegnare all’impresa.</p>
+  </section>
+  
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(20px,5vw,64px);">
+    <div data-reveal style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9;background:#EFE9DC;box-shadow:inset 0 0 0 1px rgba(140,106,67,.12);">
+      <div style="position:absolute;left:16px;top:16px;z-index:2;font:500 10px Inter;letter-spacing:.18em;text-transform:uppercase;color:#1A1714;background:rgba(247,243,236,.86);padding:6px 11px;border-radius:2px;">Pianta di progetto</div>
+      <img src="assets/media-bagno-remote.jpg" alt="Pianta di progetto del bagno: layout ottimizzato su misure reali." style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <p style="margin:12px 0 0;font:300 13px/1.6 Inter;color:rgba(26,23,20,.55);">La pianta di progetto: layout ottimizzato sulle misure reali del tuo bagno, prima ancora del render.</p>
+  </section>
+  
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(8px,2vw,20px) clamp(20px,5vw,64px) clamp(20px,3vw,40px);">
+    <div data-reveal style="max-width:820px;background:#EFE9DC;border-left:3px solid #B8966A;border-radius:3px;padding:clamp(24px,3vw,32px) clamp(26px,3vw,36px);">
+      <div style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Come definiamo il prezzo</div>
+      <p style="margin:0;font:300 clamp(15px,1.4vw,17px)/1.7 Inter;color:rgba(26,23,20,.72);">Ogni fascia non è una stima a sensazione. Dipende da quattro fattori misurabili, che si traducono in più o meno ore di lavoro reale: la metratura e lo scope dell'ambiente, la complessità tecnica (impianti, doppio elemento, vasca), la distanza fisica per i servizi on-site, e la qualità della documentazione che ci fornisci — una planimetria precisa accelera il lavoro, solo foto richiede una ricostruzione più lunga. Sai sempre perché paghi quella cifra, prima di iniziare.</p>
+    </div>
+  </section>
+  
+  
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(8px,2vw,20px) clamp(20px,5vw,64px) clamp(20px,3vw,40px);">
+    <div data-reveal style="max-width:820px;background:#FBF8F2;border:1px solid rgba(140,106,67,.2);border-radius:3px;padding:clamp(24px,3vw,32px) clamp(26px,3vw,36px);">
+      <div style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:6px;">Revisioni</div>
+      <div style="font:400 clamp(22px,2.6vw,28px)/1.2 'Cormorant Garamond',serif;color:#1A1714;margin-bottom:20px;">1 revisione materiali inclusa, il resto è chiaro</div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:16px 0;border-top:1px solid rgba(140,106,67,.16);">
+          <div style="flex:1;">
+            <div style="font:500 14px Inter;color:#1A1714;margin-bottom:4px;">Revisione 1</div>
+            <div style="font:300 13px/1.55 Inter;color:rgba(26,23,20,.6);">Solo cambio materiale o colore nello stesso effetto (es. stesso cemento, tono piu scuro).</div>
+          </div>
+          <span style="font:500 15px Inter;color:#8C6A43;white-space:nowrap;">Inclusa</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:16px 0;border-top:1px solid rgba(140,106,67,.16);">
+          <div style="flex:1;">
+            <div style="font:500 14px Inter;color:#1A1714;margin-bottom:4px;">Revisione 2</div>
+            <div style="font:300 13px/1.55 Inter;color:rgba(26,23,20,.6);">Cambio materiale o effetto (es. da cemento a marmo).</div>
+          </div>
+          <span style="font:500 15px Inter;color:#8C6A43;white-space:nowrap;">+€90</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:16px 0;border-top:1px solid rgba(140,106,67,.16);">
+          <div style="flex:1;">
+            <div style="font:500 14px Inter;color:#1A1714;margin-bottom:4px;">Revisione layout</div>
+            <div style="font:300 13px/1.55 Inter;color:rgba(26,23,20,.6);">Cambio strutturale: altro sanitario, altra configurazione. Trattata come nuova pratica parziale.</div>
+          </div>
+          <span style="font:500 15px Inter;color:#8C6A43;white-space:nowrap;">+€149</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(20px,5vw,64px) clamp(40px,5vw,64px);">
+    <div class="dm-2col" style="display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(32px,5vw,56px);">
+      <div data-reveal>
+        <div style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:24px;">Cosa ricevi</div>
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(140,106,67,.18);">
+            <span style="font:500 13px Inter;color:#8C6A43;letter-spacing:.04em;margin-top:3px;min-width:24px;">01</span>
+            <span style="font:300 clamp(16px,1.5vw,19px)/1.5 Inter;color:#1A1714;">Layout tecnico quotato del bagno</span>
+          </div>
+          <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(140,106,67,.18);">
+            <span style="font:500 13px Inter;color:#8C6A43;letter-spacing:.04em;margin-top:3px;min-width:24px;">02</span>
+            <span style="font:300 clamp(16px,1.5vw,19px)/1.5 Inter;color:#1A1714;">Capitolato materiali e finiture</span>
+          </div>
+          <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(140,106,67,.18);">
+            <span style="font:500 13px Inter;color:#8C6A43;letter-spacing:.04em;margin-top:3px;min-width:24px;">03</span>
+            <span style="font:300 clamp(16px,1.5vw,19px)/1.5 Inter;color:#1A1714;">Render fotorealistico dell’ambiente</span>
+          </div>
+          <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(140,106,67,.18);">
+            <span style="font:500 13px Inter;color:#8C6A43;letter-spacing:.04em;margin-top:3px;min-width:24px;">04</span>
+            <span style="font:300 clamp(16px,1.5vw,19px)/1.5 Inter;color:#1A1714;">Lista della spesa pronta per l’impresa</span>
+          </div>
+          <div style="display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(140,106,67,.18);">
+            <span style="font:500 13px Inter;color:#8C6A43;letter-spacing:.04em;margin-top:3px;min-width:24px;">05</span>
+            <span style="font:300 clamp(16px,1.5vw,19px)/1.5 Inter;color:#1A1714;">1 revisione inclusa (materiali)</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal style="background:#EFE9DC;border-radius:3px;padding:30px 28px;align-self:start;">
+        <div style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Per chi è</div>
+        <p style="margin:0 0 24px;font:300 16px/1.6 Inter;color:rgba(26,23,20,.7);">Chi rifà il bagno e vuole decidere tutto — layout, materiali, costi — prima ancora di chiamare l’impresa.</p>
+        <div style="font:500 12px Inter;letter-spacing:.06em;text-transform:uppercase;color:#1A1714;margin-bottom:12px;">Incluso</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.66);padding:5px 0;"><span style="color:#7A8C7A;">✓</span> Layout quotato</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.66);padding:5px 0;"><span style="color:#7A8C7A;">✓</span> Render fotorealistico</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.66);padding:5px 0;"><span style="color:#7A8C7A;">✓</span> Capitolato + lista spesa</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.66);padding:5px 0;"><span style="color:#7A8C7A;">✓</span> 1 revisione (materiali)</div>
+        <div style="font:500 12px Inter;letter-spacing:.06em;text-transform:uppercase;color:#1A1714;margin:18px 0 12px;">Fuori scope</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.5);padding:5px 0;"><span style="color:#B85C5C;">—</span> Posa in opera</div>
+        <div style="display:flex;gap:9px;font:300 14px/1.5 Inter;color:rgba(26,23,20,.5);padding:5px 0;"><span style="color:#B85C5C;">—</span> Sopralluogo fisico</div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(44px,5vw,68px) clamp(20px,5vw,64px);">
+    <div data-reveal style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Gli stili DIMORAMI · Punto di partenza</div>
+    <h2 data-reveal style="margin:0 0 14px;font:300 clamp(28px,4vw,44px)/1.1 'Cormorant Garamond',serif;letter-spacing:-.01em;">Non trovi le parole per il tuo stile? <em style="font-style:italic;color:#8C6A43;">Parti da qui.</em></h2>
+    <p data-reveal style="margin:0 0 40px;max-width:640px;font:300 16px/1.65 Inter;color:rgba(26,23,20,.62);">Nel brief iniziale ti chiedo lo stile che senti tuo. Se non sai da dove cominciare, queste tre direzioni sono un linguaggio comune di partenza — poi il progetto si costruisce su misura, sul tuo spazio e sulle tue abitudini.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;">
+      <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
+        <img src="assets/moodboard-essenza.jpg" alt="Moodboard stile Essenza — DIMORAMI Premium Renovation Advisory" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;">
+        <div style="padding:22px 22px 20px;flex:1;display:flex;flex-direction:column;">
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Essenza</div>
+          <div style="font:500 10.5px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8C6A43;margin-top:5px;">Naturale · Calda · Raffinata</div>
+          <p style="margin:11px 0 0;font:300 14px/1.55 Inter;color:rgba(26,23,20,.62);flex:1;">Materie naturali e tonalità calde: travertino, rovere chiaro, microcemento tortora, ottone spazzolato. La bellezza essenziale della natura, senza tempo e senza rumore.</p>
+        </div>
+      </div>
+      <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
+        <img src="assets/moodboard-urban-luxe.jpg" alt="Moodboard stile Urban Luxe — DIMORAMI Premium Renovation Advisory" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;">
+        <div style="padding:22px 22px 20px;flex:1;display:flex;flex-direction:column;">
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Urban Luxe</div>
+          <div style="font:500 10.5px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8C6A43;margin-top:5px;">Moderno · Deciso · Metropolitano</div>
+          <p style="margin:11px 0 0;font:300 14px/1.55 Inter;color:rgba(26,23,20,.62);flex:1;">Tonalità scure e superfici materiche: pietra grigia fiammata, laccato antracite, nero opaco, dettagli in metallo caldo. Forte impatto visivo, comfort intatto.</p>
+        </div>
+      </div>
+      <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
+        <img src="assets/moodboard-soft-elegance.jpg" alt="Moodboard stile Soft Elegance — DIMORAMI Premium Renovation Advisory" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;">
+        <div style="padding:22px 22px 20px;flex:1;display:flex;flex-direction:column;">
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Soft Elegance</div>
+          <div style="font:500 10.5px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8C6A43;margin-top:5px;">Delicato · Luminoso · Senza tempo</div>
+          <p style="margin:11px 0 0;font:300 14px/1.55 Inter;color:rgba(26,23,20,.62);flex:1;">Luce, forme morbide e dettagli preziosi: marble look calacatta, rosa cipria, oro spazzolato, vetro flutes. Un'eleganza che rilassa, mai fredda.</p>
+        </div>
+      </div>
+    </div>
+    <p data-reveal style="margin:26px 0 0;font:300 13px/1.6 Inter;color:rgba(26,23,20,.5);">Ogni stile ha il suo moodboard completo — palette materiali, colori, dettagli e layout di ispirazione — che fa parte del progetto che ricevi.</p>
+  </section>
+
+  <section style="background:#EFE9DC;">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,64px);">
+      <div data-reveal style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Come funziona</div>
+      <h2 data-reveal style="margin:0 0 44px;font:300 clamp(28px,4vw,44px)/1.1 'Cormorant Garamond',serif;letter-spacing:-.01em;">Tre passaggi, <em style="font-style:italic;color:#8C6A43;">zero sorprese.</em></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+        <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.16);border-radius:3px;padding:28px 26px;">
+          <div style="font:300 40px 'Cormorant Garamond',serif;color:#B8966A;line-height:1;">01</div>
+          <div style="font:500 21px 'Cormorant Garamond',serif;color:#1A1714;margin-top:14px;">Raccolgo lo spazio</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(26,23,20,.62);margin-top:10px;">Misure, planimetria e foto del bagno attuale.</div>
+        </div>
+        <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.16);border-radius:3px;padding:28px 26px;">
+          <div style="font:300 40px 'Cormorant Garamond',serif;color:#B8966A;line-height:1;">02</div>
+          <div style="font:500 21px 'Cormorant Garamond',serif;color:#1A1714;margin-top:14px;">Progetto e rendo</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(26,23,20,.62);margin-top:10px;">Layout, scelta materiali e render dell’ambiente finito.</div>
+        </div>
+        <div data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.16);border-radius:3px;padding:28px 26px;">
+          <div style="font:300 40px 'Cormorant Garamond',serif;color:#B8966A;line-height:1;">03</div>
+          <div style="font:500 21px 'Cormorant Garamond',serif;color:#1A1714;margin-top:14px;">Consegno il capitolato</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(26,23,20,.62);margin-top:10px;">Tutto pronto da passare all’impresa, con una revisione materiali inclusa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(8px,2vw,20px) clamp(20px,5vw,64px) clamp(44px,5vw,68px);">
+    <div data-reveal class="dm-2col" style="background:#1A1714;color:#F7F3EC;border-radius:3px;overflow:hidden;display:grid;grid-template-columns:1.25fr .75fr;">
+      <div style="padding:clamp(32px,4vw,52px);">
+        <div style="font:500 12px Inter;letter-spacing:.2em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">Caso studio</div>
+        <div style="font:300 clamp(24px,3vw,36px)/1.2 'Cormorant Garamond',serif;color:#F7F3EC;max-width:520px;">Un bagno di 5 m², progettato <em style="font-style:italic;color:#B8966A;">senza un solo sopralluogo.</em></div>
+        <p style="margin:16px 0 26px;font:300 15px/1.7 Inter;color:rgba(247,243,236,.62);max-width:480px;">Dal disegno inviato via email al capitolato pronto per l’impresa — sfoglialo come una vera proposta DIMORAMI.</p>
+        <a href="caso-studio-bagno-remote.html" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 14px Inter;padding:16px 26px;border-radius:2px;text-decoration:none;">Sfoglia il caso studio <span style="color:#8C6A43;">→</span></a>
+      </div>
+      <div style="position:relative;min-height:200px;background:#EFE9DC center/cover no-repeat url('assets/media-bagno-remote.jpg');">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,20,0) 50%,rgba(26,23,20,.45));"></div>
+        <div style="position:absolute;left:20px;bottom:18px;right:20px;color:#1A1714;font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;background:rgba(247,243,236,.86);padding:8px 12px;border-radius:2px;display:inline-block;">8 pagine · Proposta sfogliabile</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#1A1714;color:#F7F3EC;">
+    <div data-reveal style="max-width:840px;margin:0 auto;padding:clamp(56px,7vw,104px) clamp(20px,5vw,64px);text-align:center;">
+      <h2 style="margin:0 0 18px;font:300 clamp(30px,4.4vw,52px)/1.08 'Cormorant Garamond',serif;letter-spacing:-.01em;">Pronto per <em style="font-style:italic;color:#B8966A;">Bagno Remote?</em></h2>
+      <p style="margin:0 auto 32px;max-width:440px;font:300 16px/1.6 Inter;color:rgba(247,243,236,.6);">Raccontami il tuo spazio. Ti rispondo entro 24 ore lavorative con i prossimi passi.</p>
+      <a href="contatti.html" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 32px;border-radius:2px;text-decoration:none;">Richiedi Da €390 →</a>
+    </div>
+  </section>
+  <footer style="background:#161310;color:#F7F3EC;">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,5vw,64px) clamp(28px,4vw,40px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px;">
+        <div style="grid-column:span 1;min-width:200px;">
+          <div style="display:flex;align-items:center;">
+            <img src="assets/logo-footer.png" alt="DIMORAMI · Premium Renovation Advisory" style="height:88px;width:auto;display:block;">
+          </div>
+          <p style="font:300 14px/1.6 Inter;color:rgba(247,243,236,.5);margin:16px 0 0;max-width:240px;">Il tuo spazio diventa dimora. Premium Renovation Advisory.</p>
+        </div>
         <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">Compili il form dettagliato</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Misure, planimetria, foto del bagno attuale, stile desiderato, budget e zona — tutto in un unico invio, qui sotto.</p>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">Remote</div>
+          <a href="audit-digitale.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Audit Digitale</a>
+          <a href="pre-acquisto.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Pre-Acquisto</a>
+          <a href="bagno-remote.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno Remote</a>
+          <a href="living-remote.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Living Remote</a>
         </div>
-      </div>
-      <div style="padding:20px 24px;background:var(--white);border-radius:3px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 12px rgba(26,23,20,.05);">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(140,106,67,.3);min-width:32px;line-height:1;">2</span>
         <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">Fase 1 — Layout + capitolato</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Progetto layout 2D ottimizzato e capitolato materiali su 6 categorie (pavimento, pareti, sanitari, doccia/vasca, rubinetterie, mobile lavabo) entro 5 giorni lavorativi.</p>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">On-Site</div>
+          <a href="bagno-onsite.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno</a>
+          <a href="bagno-assente.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno Assente</a>
+          <a href="appartamento.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Appartamento</a>
+          <a href="appartamento-assente.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Appartamento Assente</a>
         </div>
-      </div>
-      <div style="padding:20px 24px;background:var(--white);border-radius:3px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 2px 12px rgba(26,23,20,.05);">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(140,106,67,.3);min-width:32px;line-height:1;">3</span>
         <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">2 revisioni incluse</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Aggiusti layout o materiali finché non sei sicuro. Terza revisione, se serve, €100.</p>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">Pagine</div>
+          <a href="chi-sono.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Chi sono</a>
+          <a href="contatti.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Contatti</a>
+          <a href="guida-bagno.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Guida Bagno</a>
+          <a href="blog.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Blog</a>
         </div>
       </div>
-      <div style="padding:20px 24px;background:var(--travertino);border-radius:3px;display:flex;gap:18px;align-items:flex-start;">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(253,252,249,.3);min-width:32px;line-height:1;">4</span>
-        <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;color:var(--white);">Fase 2 — Materiali reali</strong>
-          <p style="font-size:13px;color:rgba(253,252,249,.7);">Selezioni i materiali da Polis con il capitolato come guida. Trasformo il preventivo in documento brandizzato DIMORAMI con lista della spesa finale.</p>
-        </div>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid rgba(184,150,106,.2);font:300 12.5px Inter;color:rgba(247,243,236,.4);">
+        <span>© 2026 DIMORAMI · Enrico Saggese · Ariccia (RM) · <a href="https://www.iubenda.com/privacy-policy/55971286" target="_blank" rel="noopener" style="color:rgba(247,243,236,.4);">Privacy &amp; Cookie</a></span>
+        <span>Roma Sud · Castelli Romani · dimorami.it</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ── COSA INCLUDE ── -->
-<section class="section" style="background:var(--calce);" data-reveal>
-  <div style="max-width:800px;margin:0 auto;text-align:center;margin-bottom:52px;">
-    <p class="section-label">Cosa ricevi</p>
-    <h2 class="section-title">Il progetto completo,<br><em>pronto per l'impresa.</em></h2>
-  </div>
-  <div class="grid-3">
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">📐</div>
-      <h3 class="card-title">Layout 2D ottimizzato</h3>
-      <p class="card-body">Disposizione di sanitari, doccia/vasca e mobile lavabo pensata sulle tue misure reali, con attenzione a scarichi e impianti esistenti.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">📋</div>
-      <h3 class="card-title">Capitolato 6 categorie</h3>
-      <p class="card-body">Pavimento, pareti, sanitari, doccia/vasca, rubinetterie, mobile lavabo — ogni categoria con caratteristiche tecniche pronte da consegnare all'impresa.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">🎨</div>
-      <h3 class="card-title">Coerenza stilistica</h3>
-      <p class="card-body">Materiali selezionati per coerenza tra loro e con lo stile che hai indicato — non solo "bello", ma armonico nell'insieme.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">🧱</div>
-      <h3 class="card-title">Materiali reali Polis</h3>
-      <p class="card-body">Fase 2: selezione dei materiali effettivamente disponibili, con codici prodotto, prezzi e disponibilità — non solo un concept.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">🧾</div>
-      <h3 class="card-title">Lista della spesa finale</h3>
-      <p class="card-body">Documento brandizzato DIMORAMI con tutti i materiali scelti, quantità, scarto incluso e prezzo totale — il tuo capitolato d'acquisto.</p>
-    </div>
-    <div class="card">
-      <div style="font-size:28px;margin-bottom:16px;">🔄</div>
-      <h3 class="card-title">2 revisioni incluse</h3>
-      <p class="card-body">Layout o materiali non ti convincono al 100%? Due round di modifiche compresi nella fee, senza costi extra.</p>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:12px;color:var(--text-low);max-width:640px;margin:40px auto 0;line-height:1.7;">
-    Progettazione prodotta da remoto su planimetria e foto: margine di tolleranza ±10% sulle misure, ±15% sui costi indicativi. Layout = concept advisory, non un elaborato tecnico firmato. Disclosure: ho una partnership preferenziale con Polis Manifatture Ceramiche SpA, dove lavoro come responsabile showroom.
-  </p>
-</section>
-
-<!-- ── PER CHI È ── -->
-<section class="section" data-reveal>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div>
-      <p class="section-label">Per chi è</p>
-      <h2 class="section-title">Hai un bagno<br><em>da ristrutturare?</em></h2>
-      <p class="section-body">Sai che vuoi rifare il bagno ma non hai un progetto, non sai quali materiali scegliere o come consegnare un capitolato chiaro all'impresa. Funziona per bagni standard con vincoli leggibili da planimetria e foto — non per edifici storici complessi.</p>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:12px;">
-      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
-        <span style="font-size:20px;">🛁</span>
-        <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">Bagno semplice o medio</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Meno di 8 mq, layout standard o con 2 opzioni di disposizione. Il caso più frequente.</p>
-        </div>
-      </div>
-      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
-        <span style="font-size:20px;">📏</span>
-        <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">Bagno grande o doppio lavabo</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Più di 8 mq, doppio lavabo o vasca: complessità maggiore, capitolato più articolato.</p>
-        </div>
-      </div>
-      <div class="card" style="display:flex;gap:14px;align-items:flex-start;">
-        <span style="font-size:20px;">📡</span>
-        <div>
-          <strong style="font-size:14px;display:block;margin-bottom:4px;">Chi non è in zona</strong>
-          <p style="font-size:13px;color:var(--text-mid);">Sei fuori Roma o all'estero ma ristrutturi un immobile in Italia. Nessun sopralluogo necessario.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FORM DETTAGLIATO ── -->
-<section id="richiedi" class="section" style="background:var(--calce);" data-reveal>
-  <div style="max-width:780px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:48px;">
-      <p class="section-label">Inizia il progetto</p>
-      <h2 class="section-title">Più dettagli mi dai,<br><em>più preciso è il progetto.</em></h2>
-      <p style="font-size:14px;color:var(--text-mid);margin-top:12px;">Compila il form — ricevi conferma e preventivo esatto entro 24 ore. Nessun pagamento richiesto ora.</p>
-    </div>
-
-    <form id="bagno-form" action="https://formspree.io/f/PLACEHOLDER" method="POST" enctype="multipart/form-data" style="display:flex;flex-direction:column;gap:28px;">
-
-      <input type="hidden" name="_subject" value="Nuova richiesta Dimora Bagno Remote">
-      <input type="hidden" name="servizio" value="Dimora Bagno Remote">
-
-      <!-- DATI CLIENTE -->
-      <div>
-        <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--travertino);margin-bottom:16px;border-bottom:1px solid rgba(140,106,67,.2);padding-bottom:8px;">01 · I tuoi dati</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div>
-            <label class="form-label">Nome e cognome *</label>
-            <input type="text" name="nome" required class="form-input">
-          </div>
-          <div>
-            <label class="form-label">Email *</label>
-            <input type="email" name="email" required class="form-input">
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-          <div>
-            <label class="form-label">Telefono / WhatsApp *</label>
-            <input type="tel" name="telefono" required class="form-input" placeholder="+39 ...">
-          </div>
-          <div>
-            <label class="form-label">Come hai trovato DIMORAMI</label>
-            <select name="provenienza" class="form-input">
-              <option value="">Seleziona...</option>
-              <option value="instagram">Instagram</option>
-              <option value="google">Ricerca Google</option>
-              <option value="referral">Passaparola / referral</option>
-              <option value="agenzia">Agenzia immobiliare</option>
-              <option value="altro">Altro</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- ZONA APPROFONDITA -->
-      <div>
-        <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--travertino);margin-bottom:16px;border-bottom:1px solid rgba(140,106,67,.2);padding-bottom:8px;">02 · La zona dell'immobile</p>
-        <p style="font-size:13px;color:var(--text-mid);margin-bottom:16px;line-height:1.7;">Anche se il progetto è da remoto, la zona conta: cambia i prezzi di mercato dei materiali, la disponibilità di artigiani locali e le eventuali norme condominiali o storiche.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div>
-            <label class="form-label">Comune *</label>
-            <input type="text" name="zona_comune" required class="form-input">
-          </div>
-          <div>
-            <label class="form-label">Provincia *</label>
-            <input type="text" name="zona_provincia" required class="form-input">
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-          <div>
-            <label class="form-label">Tipo di edificio</label>
-            <select name="zona_tipo_edificio" class="form-input">
-              <option value="">Seleziona...</option>
-              <option value="condominio">Condominio</option>
-              <option value="villa">Villa / casa indipendente</option>
-              <option value="storico">Edificio storico / vincolato</option>
-              <option value="non_so">Non so</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label">Anno di costruzione (circa)</label>
-            <input type="text" name="zona_anno" class="form-input" placeholder="Es. anni '70, dopo 2000...">
-          </div>
-        </div>
-        <div style="margin-top:16px;">
-          <label class="form-label">Vincoli particolari della zona o del condominio</label>
-          <textarea name="zona_vincoli" rows="3" class="form-input" placeholder="Es. regolamento condominiale su orari lavori, vincolo storico/paesaggistico, accesso furgoni limitato, piano alto senza ascensore montacarichi..."></textarea>
-        </div>
-      </div>
-
-      <!-- DATI DEL BAGNO -->
-      <div>
-        <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--travertino);margin-bottom:16px;border-bottom:1px solid rgba(140,106,67,.2);padding-bottom:8px;">03 · Il bagno attuale</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
-          <div>
-            <label class="form-label">Lunghezza (m) *</label>
-            <input type="text" name="misura_lunghezza" required class="form-input">
-          </div>
-          <div>
-            <label class="form-label">Larghezza (m) *</label>
-            <input type="text" name="misura_larghezza" required class="form-input">
-          </div>
-          <div>
-            <label class="form-label">Altezza (m)</label>
-            <input type="text" name="misura_altezza" class="form-input">
-          </div>
-        </div>
-        <div style="margin-top:16px;">
-          <label class="form-label">Planimetria (foto o PDF, anche disegnata a mano) *</label>
-          <input type="file" name="planimetria" required class="form-input" accept="image/*,.pdf" style="padding:10px;">
-        </div>
-        <div style="margin-top:16px;">
-          <label class="form-label">Foto del bagno attuale (più foto, anche da angolazioni diverse) *</label>
-          <input type="file" name="foto_bagno" required multiple class="form-input" accept="image/*" style="padding:10px;">
-        </div>
-        <div style="margin-top:16px;">
-          <label class="form-label">Cosa vuoi mantenere / cosa vuoi spostare</label>
-          <textarea name="impianti_esistenti" rows="3" class="form-input" placeholder="Es. scarico WC fisso, voglio spostare il box doccia, impianto elettrico da rifare..."></textarea>
-        </div>
-      </div>
-
-      <!-- STILE E BUDGET -->
-      <div>
-        <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--travertino);margin-bottom:16px;border-bottom:1px solid rgba(140,106,67,.2);padding-bottom:8px;">04 · Stile e budget</p>
-        <div style="margin-bottom:16px;">
-          <label class="form-label">Stile desiderato</label>
-          <select name="stile" class="form-input">
-            <option value="">Seleziona...</option>
-            <option value="minimal">Minimal / contemporaneo</option>
-            <option value="classico">Classico / elegante</option>
-            <option value="industriale">Industriale</option>
-            <option value="natural">Materico / naturale (legno, pietra)</option>
-            <option value="non_so">Non ho ancora deciso</option>
-          </select>
-        </div>
-        <div style="margin-bottom:16px;">
-          <label class="form-label">Hai foto di riferimento o Pinterest/Instagram da mostrare?</label>
-          <input type="file" name="riferimenti_stile" multiple class="form-input" accept="image/*" style="padding:10px;">
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-          <div>
-            <label class="form-label">Budget indicativo per i materiali</label>
-            <select name="budget" class="form-input">
-              <option value="">Seleziona...</option>
-              <option value="under_2000">Sotto €2.000</option>
-              <option value="2000_4000">€2.000 – €4.000</option>
-              <option value="4000_7000">€4.000 – €7.000</option>
-              <option value="over_7000">Oltre €7.000</option>
-              <option value="non_so">Non so ancora, voglio un consiglio</option>
-            </select>
-          </div>
-          <div>
-            <label class="form-label">Quando vuoi iniziare i lavori</label>
-            <select name="timeline" class="form-input">
-              <option value="">Seleziona...</option>
-              <option value="subito">Entro 1 mese</option>
-              <option value="1_3mesi">Tra 1 e 3 mesi</option>
-              <option value="oltre">Oltre 3 mesi</option>
-              <option value="esplorando">Sto solo valutando</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- NOTE -->
-      <div>
-        <label class="form-label">Note aggiuntive</label>
-        <textarea name="note" rows="4" class="form-input" placeholder="Tutto ciò che ritieni utile: vincoli particolari, preferenze sui materiali, domande..."></textarea>
-      </div>
-
-      <label style="display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--text-mid);line-height:1.6;cursor:pointer;">
-        <input type="checkbox" name="rinuncia_recesso" required style="margin-top:3px;flex-shrink:0;">
-        <span>Richiedo l'esecuzione immediata del servizio e dichiaro di essere consapevole che, trattandosi di un servizio interamente eseguito entro pochi giorni lavorativi, perderò il diritto di recesso di 14 giorni una volta che il servizio sarà stato completamente eseguito (art. 59, lett. a, Codice del Consumo). *</span>
-      </label>
-
-      <p style="font-size:11px;color:var(--text-low);line-height:1.6;">Inviando accetti la <a href="#" style="color:var(--travertino);">Privacy Policy</a>. I tuoi dati e i tuoi file non vengono ceduti a terzi.</p>
-
-      <button type="submit" class="btn btn-trav" style="align-self:flex-start;cursor:pointer;border:none;">Invia richiesta progetto →</button>
-    </form>
-  </div>
-</section>
-
-<footer class="footer">
-  <div>
-    <div class="footer-brand">DIMORAMI</div>
-    <p class="footer-tagline">Il tuo spazio diventa dimora.<br>Premium Renovation Advisory.</p>
-  </div>
-  <div>
-    <p class="footer-col-title">Servizi</p>
-    <ul class="footer-links">
-      <li><a href="/bagno-remote.html">Bagno Remote</a></li>
-      <li><a href="/servizi.html">Tutti i servizi</a></li>
-    </ul>
-  </div>
-  <div>
-    <p class="footer-col-title">Pagine</p>
-    <ul class="footer-links">
-      <li><a href="/metodo.html">Il Metodo</a></li>
-      <li><a href="/chi-sono.html">Chi sono</a></li>
-      <li><a href="/contatti.html">Contatti</a></li>
-    </ul>
-  </div>
-  <div>
-    <p class="footer-col-title">Contatti</p>
-    <ul class="footer-links">
-      <li><a href="mailto:enrico@dimorami.it">enrico@dimorami.it</a></li>
-      <li><a href="https://instagram.com/dimorami.it">@dimorami.it</a></li>
-    </ul>
-  </div>
-</footer>
-<div class="footer-bar">
-  <p>© 2026 DIMORAMI · Enrico Saggese</p>
-  <p>dimorami.it</p>
-</div>
-
-<script>
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
-document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
-
-// Notifica anche Make.com (webhook) con i campi testuali, in parallelo all'invio Formspree (che gestisce email + allegati).
-const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/PLACEHO
+  </footer><script>(function(){var b=document.getElementById('dm-burger'),m=document.getElementById('dm-mobilemenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');});}})();</script>
+</body>
+</html>

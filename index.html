@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIMORAMI — Premium Renovation Advisory | Castelli Romani · Roma Sud</title>
-  <meta name="description" content="Advisory e coordinamento cantieri. Analisi preventivi in 24h da remoto. Presidio fisico ai Castelli Romani e Roma Sud. Il tuo spazio diventa dimora.">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="apple-touch-icon" href="/favicon-64.png">
-  <!-- IUBENDA — Cookie Solution + Privacy/Cookie Policy -->
-  <script type="text/javascript">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIMORAMI · Premium Renovation Advisory — Consulenza indipendente di ristrutturazione</title>
+<meta name="description" content="Consulenza indipendente di ristrutturazione: progettiamo, validiamo e presidiamo il tuo progetto. Remote in tutta Italia, On-Site a Roma Sud e Castelli Romani.">
+<link rel="canonical" href="https://dimorami.it/">
+<meta property="og:title" content="DIMORAMI · Premium Renovation Advisory — Consulenza indipendente di ristrutturazione">
+<meta property="og:description" content="Consulenza indipendente di ristrutturazione: progettiamo, validiamo e presidiamo il tuo progetto. Remote in tutta Italia, On-Site a Roma Sud e Castelli Romani.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dimorami.it/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#F7F3EC;-webkit-font-smoothing:antialiased;font-family:Inter,sans-serif;color:#1A1714;min-height:100vh;}
+  a{-webkit-tap-highlight-color:transparent;}
+  ::selection{background:#8C6A43;color:#F7F3EC;}
+  @keyframes dmReveal{from{transform:translateY(16px);}to{transform:translateY(0);}}
+  [data-reveal]{animation:dmReveal .7s cubic-bezier(.2,.7,.2,1) both;}
+  @keyframes csTurn{from{opacity:0;transform:translateX(22px) rotateY(5deg);}to{opacity:1;transform:translateX(0) rotateY(0);}}
+  .dm-navlinks{display:flex;}
+  .dm-burger{display:none!important;}
+  .dm-card{transition:box-shadow .3s,transform .3s;}
+  .dm-card:hover{box-shadow:0 24px 48px -28px rgba(26,23,20,.4);transform:translateY(-3px);}
+  .dm-mobilemenu{display:none;}
+  .dm-mobilemenu.open{display:flex;}
+  .cs-page{display:none;}
+  .cs-page.active{display:flex;animation:csTurn .55s cubic-bezier(.3,.7,.2,1) both;}
+  @media(max-width:880px){
+    .dm-navlinks{display:none;}
+    .dm-burger{display:inline-flex!important;}
+    .dm-herogrid{grid-template-columns:1fr!important;}
+    .dm-2col{grid-template-columns:1fr!important;}
+    .dm-navcta{display:none;}
+  }
+  input:focus,textarea:focus,select:focus{outline:none;border-color:#8C6A43!important;}
+  @media (prefers-reduced-motion: reduce){.dm-herovideo{display:none!important;}}
+</style>
+<script type="text/javascript">
   var _iub = _iub || [];
   _iub.csConfiguration = {"siteId":4564608,"cookiePolicyId":55971286,"storage":{"useSiteId":true}};
   _iub.csLangConfiguration = {"it":{"cookiePolicyId":55971286}};
@@ -20,684 +51,405 @@
   <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4564608.js"></script>
   <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
   <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-  <style>
-    /* ── HERO ── */
-    .hero {
-      min-height: 90vh;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      padding-top: 72px;
-    }
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 72px var(--px) 72px clamp(32px,6vw,80px);
-      background: var(--white);
-    }
-    .hero-right {
-      position: relative;
-      overflow: hidden;
-      min-height: 480px;
-    }
-    .hero-right img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 38%;
-      display: block;
-    }
-    .hero-right-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(253,252,249,.15) 0%, transparent 40%),
-                  linear-gradient(to top, rgba(26,23,20,.35) 0%, transparent 50%);
-    }
-    .hero-right-caption {
-      position: absolute;
-      bottom: 28px;
-      left: 28px;
-      right: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .hero-right-tag {
-      background: rgba(253,252,249,.12);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(253,252,249,.2);
-      color: rgba(253,252,249,.85);
-      font-size: 10px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      padding: 8px 14px;
-      border-radius: 2px;
-    }
-    .hero-eyebrow {
-      font-size: 10px;
-      letter-spacing: .24em;
-      text-transform: uppercase;
-      color: var(--travertino);
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .hero-line { width: 24px; height: 1px; background: var(--travertino); }
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(58px, 6.5vw, 96px);
-      font-weight: 300;
-      line-height: 1.02;
-      color: var(--lava);
-      margin-bottom: 28px;
-    }
-    h1 em { font-style: italic; color: var(--travertino); }
-    .hero-sub {
-      font-size: 16px;
-      line-height: 1.82;
-      color: var(--text-mid);
-      max-width: 400px;
-      margin-bottom: 44px;
-    }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-
-    /* ── GALLERY ── */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 360px 280px;
-      gap: 3px;
-    }
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-item.tall { grid-row: span 2; }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .6s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.04); }
-    .gallery-item-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(26,23,20,.65) 0%, transparent 55%);
-      opacity: 0;
-      transition: opacity .3s;
-      display: flex;
-      align-items: flex-end;
-      padding: 24px;
-    }
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
-    .gallery-item-label {
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--white);
-      font-weight: 400;
-    }
-
-    /* ── PRIMA/DOPO SLIDER ── */
-    .pd-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-      cursor: ew-resize;
-      user-select: none;
-      box-shadow: 0 20px 60px rgba(26,23,20,.15);
-    }
-    .pd-after, .pd-before {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-    .pd-before {
-      position: absolute;
-      inset: 0;
-      clip-path: inset(0 50% 0 0);
-    }
-    .pd-label {
-      position: absolute;
-      top: 20px;
-      font-size: 10px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 2px;
-      font-weight: 400;
-    }
-    .pd-label-prima { left: 20px; background: rgba(26,23,20,.55); color: rgba(255,255,255,.85); }
-    .pd-label-dopo  { right: 20px; background: rgba(140,106,67,.85); color: var(--white); }
-    .pd-handle {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 3px;
-      background: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .pd-btn {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 2px solid var(--travertino);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 16px rgba(26,23,20,.2);
-      font-size: 15px;
-      color: var(--travertino);
-      flex-shrink: 0;
-    }
-
-    /* ── RENDER ── */
-    .render-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 3px;
-    }
-    .render-item {
-      position: relative;
-      overflow: hidden;
-      height: 400px;
-    }
-    .render-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .6s ease;
-    }
-    .render-item:hover img { transform: scale(1.04); }
-    .render-item-info {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 24px;
-      background: linear-gradient(to top, rgba(26,23,20,.7) 0%, transparent 100%);
-    }
-    .render-item-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .render-item-sub {
-      font-size: 10px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: rgba(253,252,249,.55);
-    }
-
-    /* ── TRACK CARDS ── */
-    .track-card {
-      background: var(--white);
-      border: 1px solid rgba(140,106,67,.12);
-      border-radius: 4px;
-      padding: 28px 32px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      box-shadow: 0 2px 20px rgba(26,23,20,.05);
-      transition: box-shadow .25s, transform .25s;
-    }
-    .track-card:hover { box-shadow: 0 8px 40px rgba(26,23,20,.1); transform: translateY(-2px); }
-    .track-icon {
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    /* ── MATERIALI ── */
-    .materiali-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 480px;
-    }
-    .materiali-img {
-      position: relative;
-      overflow: hidden;
-    }
-    .materiali-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .materiali-content {
-      padding: 72px clamp(32px,6vw,80px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: var(--lava);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1100px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { min-height: 50vw; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .gallery-item.tall { grid-row: span 1; }
-      .render-grid { grid-template-columns: 1fr; }
-      .render-item { height: 300px; }
-      .materiali-section { grid-template-columns: 1fr; }
-      .materiali-img { min-height: 300px; }
-    }
-  </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="/" class="nav-logo" aria-label="DIMORAMI — Home">
-    <img src="/assets/logo-symbol.svg" alt="" aria-hidden="true" height="32" width="32" style="display:inline-block;vertical-align:middle;margin-right:9px;">
-    <span style="vertical-align:middle;">DIMORAMI</span><span class="nav-dot" style="vertical-align:middle;"></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="/metodo.html">Metodo</a></li>
-    <li><a href="/servizi.html">Servizi</a></li>
-    <li><a href="/chi-sono.html">Chi sono</a></li>
-    <li><a href="/contatti.html">Contatti</a></li>
-    <li><a href="/blog/">Blog</a></li>
-  </ul>
-  <a href="/audit-digitale.html" class="nav-cta">Audit Digitale <span class="nav-cta-price">€249</span></a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow"><span class="hero-line"></span>Premium Renovation Advisory<span class="hero-line"></span></p>
-    <h1>Il tuo spazio<br>diventa<br><em>dimora.</em></h1>
-    <p class="hero-sub">Ristrutturare con metodo. Abitare il risultato con serenità. Consulenza e presidio di cantiere — da remoto su tutto il territorio nazionale, in presenza ai Castelli Romani e Roma Sud.</p>
-    <div class="hero-actions">
-      <a href="/audit-digitale.html" class="btn btn-trav">Audit Digitale — €249 →</a>
-      <a href="/metodo.html" class="btn btn-ghost">Scopri il Metodo</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img src="/img/bagno-rovere-specchio.jpg" alt="Bagno ristrutturato con mobile in rovere e specchio retroilluminato — progetto DIMORAMI">
-    <div class="hero-right-overlay"></div>
-    <div class="hero-right-caption">
-      <span class="hero-right-tag">Progetto DIMORAMI · Castelli Romani</span>
-      <span class="hero-right-tag">Dimora Bagno Presidio</span>
-    </div>
-  </div>
-</section>
-
-<!-- STRIP -->
-<div style="background:var(--travertino);padding:20px var(--px);display:flex;gap:40px;overflow:hidden;flex-wrap:wrap;">
-  <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,252,249,.65);">Ceramiche · Arredo Bagno</span>
-  <span style="color:rgba(253,252,249,.25);">·</span>
-  <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,252,249,.65);">Interior Design</span>
-  <span style="color:rgba(253,252,249,.25);">·</span>
-  <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,252,249,.65);">Coordinamento Cantieri</span>
-  <span style="color:rgba(253,252,249,.25);">·</span>
-  <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,252,249,.65);">Analisi Preventivi in 24h</span>
-  <span style="color:rgba(253,252,249,.25);">·</span>
-  <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,252,249,.65);">20+ Anni di Esperienza</span>
-</div>
-
-<!-- GALLERIA PROGETTI REALI -->
-<section style="padding:var(--gap) 0;background:var(--calce);">
-  <div style="padding:0 var(--px);margin-bottom:40px;" data-reveal>
-    <p class="section-label">Progetti realizzati</p>
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
-      <h2 class="section-title">Spazi trasformati.<br><em>Risultati reali.</em></h2>
-      <a href="/servizi.html" class="btn btn-outline" style="align-self:flex-end;">Vedi tutti i servizi →</a>
-    </div>
-  </div>
-  <div class="gallery-grid" data-reveal>
-    <!-- Immagine grande verticale a sinistra -->
-    <div class="gallery-item tall">
-      <img src="/img/bagno-antracite-spinapesce.jpg" alt="Bagno con rivestimento spina di pesce e mobile antracite">
-      <div class="gallery-item-overlay">
-        <span class="gallery-item-label">Bagno · Mobile Antracite · Spina di Pesce</span>
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(247,243,236,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(140,106,67,.16);">
+    <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+        <img src="assets/logo-nav.png" alt="DIMORAMI · Premium Renovation Advisory" style="height:46px;width:auto;display:block;">
+      </a>
+      <div class="dm-navlinks" style="align-items:center;gap:34px;">
+          <a href="index.html" style="font:500 14px Inter;letter-spacing:.01em;color:#8C6A43;text-decoration:none;padding:6px 0;border-bottom:1px solid #8C6A43;">Home</a>
+          <a href="servizi.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Servizi</a>
+          <a href="chi-sono.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Chi sono</a>
+          <a href="guida-bagno.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Guida Bagno</a>
+          <a href="contatti.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Contatti</a>
+          <a href="blog.html" style="font:500 14px Inter;letter-spacing:.01em;color:#1A1714;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;">Blog</a>
       </div>
+      <a href="audit-digitale.html" class="dm-navcta" style="display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC;font:500 13.5px Inter;letter-spacing:.01em;padding:12px 20px;border-radius:2px;text-decoration:none;">Audit Digitale · €199 <span style="color:#B8966A;">→</span></a>
+      <button id="dm-burger" class="dm-burger" aria-label="Menu" style="align-items:center;justify-content:center;width:42px;height:42px;background:transparent;border:1px solid rgba(140,106,67,.3);border-radius:2px;cursor:pointer;color:#1A1714;font-size:18px;">≡</button>
     </div>
-    <!-- Due immagini a destra -->
-    <div class="gallery-item">
-      <img src="/img/bagno-rovere-wide.jpg" alt="Bagno in rovere con vasca e specchio retroilluminato">
-      <div class="gallery-item-overlay">
-        <span class="gallery-item-label">Bagno · Rovere · Vasca + Doccia</span>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="/img/pavimento-spinapesce-grigio.jpg" alt="Pavimento spina di pesce in ceramica grigia">
-      <div class="gallery-item-overlay">
-        <span class="gallery-item-label">Pavimento · Spina di Pesce · Grigio Naturale</span>
-      </div>
-    </div>
-    <!-- Terza riga -->
-    <div class="gallery-item">
-      <img src="/img/cantiere-salone-durante.jpg" alt="Cantiere in corso — posa rivestimento a mattoni">
-      <div class="gallery-item-overlay">
-        <span class="gallery-item-label">In cantiere · Parete Mattoni Rustici</span>
-      </div>
-    </div>
-    <div class="gallery-item">
-      <img src="/img/campionario-materiali.jpg" alt="Selezione materiali ceramici e finiture premium">
-      <div class="gallery-item-overlay">
-        <span class="gallery-item-label">Selezione Materiali · Fase Valida</span>
-      </div>
-    </div>
+  </nav>
+  <div id="dm-mobilemenu" class="dm-mobilemenu" style="position:fixed;inset:74px 0 0 0;z-index:49;background:#F7F3EC;padding:28px clamp(20px,5vw,64px);flex-direction:column;gap:6px;">
+        <a href="index.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Home</a>
+        <a href="servizi.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Servizi</a>
+        <a href="chi-sono.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Chi sono</a>
+        <a href="guida-bagno.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Guida Bagno</a>
+        <a href="contatti.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Contatti</a>
+        <a href="blog.html" style="font:300 30px \'Cormorant Garamond\',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Blog</a>
+      <a href="audit-digitale.html" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC;font:500 15px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;justify-content:center;">Inizia con l'Audit Digitale →</a>
   </div>
-</section>
-
-<!-- PRIMA / DOPO -->
-<section style="padding:var(--gap) var(--px);background:var(--white);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:48px;" data-reveal>
-    <div>
-      <p class="section-label">Prima · Durante · Dopo</p>
-      <h2 class="section-title">Il cantiere<br><em>sotto controllo.</em></h2>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-top:20px;">Ogni progetto DIMORAMI viene documentato fase per fase. Foto di cantiere, SAL, report fotografici periodici. Il cliente vede sempre cosa sta succedendo — anche a distanza.</p>
-    </div>
-    <div style="background:var(--calce);border-radius:4px;padding:28px 32px;border:1px solid rgba(140,106,67,.1);">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--travertino);margin-bottom:16px;">Cosa documentiamo</p>
-      <div style="display:flex;flex-direction:column;gap:0;">
-        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.08);">
-          <span style="font-size:16px;">📸</span>
-          <span style="font-size:13px;color:var(--text-mid);">Report fotografico prima dell'avvio cantiere</span>
-        </div>
-        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.08);">
-          <span style="font-size:16px;">🔄</span>
-          <span style="font-size:13px;color:var(--text-mid);">SAL progressivi con foto per ogni fase</span>
-        </div>
-        <div style="display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.08);">
-          <span style="font-size:16px;">⚠️</span>
-          <span style="font-size:13px;color:var(--text-mid);">Segnalazione immediata di criticità con soluzione proposta</span>
-        </div>
-        <div style="display:flex;gap:14px;padding:12px 0;">
-          <span style="font-size:16px;">✅</span>
-          <span style="font-size:13px;color:var(--text-mid);">Collaudo finale e punch list fotografica alla consegna</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tab switcher -->
-  <div style="display:flex;gap:8px;margin-bottom:20px;" data-reveal>
-    <button onclick="switchPD(0,this)" class="pd-tab active" style="padding:9px 22px;border-radius:2px;border:1px solid rgba(140,106,67,.25);background:var(--travertino);color:var(--white);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;">Bagno · Marmo</button>
-    <button onclick="switchPD(1,this)" class="pd-tab" style="padding:9px 22px;border-radius:2px;border:1px solid rgba(140,106,67,.25);background:transparent;color:var(--text-mid);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;">Terrazzo</button>
-  </div>
-
-  <!-- Slider -->
-  <div class="pd-container" id="pdContainer" data-reveal>
-    <img class="pd-after" id="pdAfter" src="/img/bagno1-dopo.jpg" alt="Dopo — bagno marmo ristrutturato con Metodo DIMORA">
-    <img class="pd-before" id="pdBefore" src="/img/bagno1-prima.jpg" alt="Prima — impianti a vista, cantiere grezzo">
-    <span class="pd-label pd-label-prima">Prima</span>
-    <span class="pd-label pd-label-dopo">Dopo</span>
-    <div class="pd-handle" id="pdHandle">
-      <div class="pd-btn">⇔</div>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:12px;color:var(--text-low);margin-top:16px;">Trascina il cursore per confrontare · Progetti reali DIMORAMI · Castelli Romani</p>
-</section>
-
-<!-- RENDER — PRIMA CHE INIZI -->
-<section style="background:var(--calce);padding:var(--gap) 0;">
-  <div style="padding:0 var(--px);margin-bottom:40px;" data-reveal>
-    <p class="section-label">Render di progetto</p>
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
-      <h2 class="section-title">Vedi il risultato<br><em>prima che inizi.</em></h2>
-      <p style="font-size:14px;color:var(--text-mid);max-width:420px;line-height:1.75;">Ogni progetto DIMORAMI include render o concept visivi approvati dal cliente prima che il primo artigiano metta piede nello spazio.</p>
-    </div>
-  </div>
-  <div class="render-grid" data-reveal>
-    <div class="render-item">
-      <img src="/img/render-bagno-salvia.jpg" alt="Render progetto bagno con maioliche a spina di pesce verde salvia">
-      <div class="render-item-info">
-        <div class="render-item-title">Bagno · Verde Salvia</div>
-        <div class="render-item-sub">Maioliche spina di pesce · Mobile oliva · Legno</div>
-      </div>
-    </div>
-    <div class="render-item">
-      <img src="/img/render-bagno-verde.jpg" alt="Render bagno con piastrelle verde petrol e doccia">
-      <div class="render-item-info">
-        <div class="render-item-title">Bagno · Verde Petrol</div>
-        <div class="render-item-sub">Piastrelle verticali · Doccia walk-in</div>
-      </div>
-    </div>
-    <div class="render-item">
-      <img src="/img/render-bagno-marmo.jpg" alt="Render bagno con marmo blu e doccia in acciaio">
-      <div class="render-item-info">
-        <div class="render-item-title">Bagno · Marmo Blu</div>
-        <div class="render-item-sub">Grandi lastre · Finiture nere · Premium</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODELLO IBRIDO -->
-<section style="padding:var(--gap) var(--px);background:var(--white);" data-reveal>
-  <div style="max-width:600px;margin-bottom:48px;">
-    <p class="section-label">Come lavoriamo</p>
-    <h2 class="section-title">Due track.<br><em>Un metodo unico.</em></h2>
-    <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-top:20px;">Che tu sia a Roma, a Milano o all'estero — c'è un servizio DIMORAMI per la tua situazione. Da remoto in 24 ore o in presenza con presidio fisico quotidiano.</p>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-    <div class="track-card">
-      <div class="track-icon" style="background:var(--trav-pale);">🌐</div>
+  <header style="max-width:1240px;margin:0 auto;padding:clamp(48px,8vw,104px) clamp(20px,5vw,64px) clamp(40px,6vw,76px);">
+    <div class="dm-herogrid" style="display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,4vw,52px);align-items:center;">
       <div>
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--travertino);margin-bottom:6px;">Track A · Remote · Tutta Italia</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:8px;">Da ovunque, in 24 ore</h3>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;">Analisi preventivi, progettazione bagno e living, advisory pre-acquisto. Mandi i documenti, ricevi il report esperto.</p>
-        <p style="font-size:11px;color:var(--travertino);">Audit Digitale €249 · Bagno Remote · Pre-Acquisto · Living Remote</p>
+        <div data-reveal style="display:inline-flex;align-items:center;gap:12px;margin-bottom:30px;">
+          <span style="width:30px;height:1px;background:#8C6A43;"></span>
+          <span style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#8C6A43;">Premium Renovation Advisory</span>
+        </div>
+        <h1 data-reveal style="margin:0;font:300 clamp(44px,7.2vw,86px)/1.02 'Cormorant Garamond',serif;letter-spacing:-.015em;color:#1A1714;">Il tuo spazio<br>diventa <em style="font-style:italic;color:#8C6A43;">dimora.</em></h1>
+        <p data-reveal style="margin:28px 0 0;max-width:480px;font:300 clamp(16px,1.4vw,19px)/1.65 Inter;color:rgba(26,23,20,.62);">Consulenza indipendente di ristrutturazione. Non eseguiamo i lavori: progettiamo, validiamo e presidiamo il tuo progetto — da remoto in tutta Italia, di persona a Roma Sud e nei Castelli Romani.</p>
+        <div data-reveal style="display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;">
+          <a href="audit-digitale.html" style="display:inline-flex;align-items:center;gap:10px;background:#1A1714;color:#F7F3EC;font:500 14.5px Inter;padding:17px 28px;border-radius:2px;text-decoration:none;">Inizia con l'Audit Digitale <span style="color:#B8966A;">→</span></a>
+          <a href="servizi.html" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#1A1714;font:500 14.5px Inter;padding:17px 28px;border:1px solid rgba(26,23,20,.24);border-radius:2px;text-decoration:none;">Esplora i servizi</a>
+        </div>
+      </div>
+      <div data-reveal style="position:relative;">
+        <div style="position:relative;aspect-ratio:5/6;border-radius:3px;overflow:hidden;background:#E6DECE;box-shadow:0 30px 70px -30px rgba(26,23,20,.45);">
+          <img src="assets/hero-bagno.jpg" alt="Render di progetto · bagno con rivestimento verde a spina, rovere e dettagli neri" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:25% 40%;display:block;">
+            <video class="dm-herovideo" autoplay muted playsinline preload="metadata" poster="assets/hero-bagno.jpg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:25% 40%;display:block;">
+              <source src="assets/hero-bagno.mp4" type="video/mp4">
+            </video>
+          <div style="position:absolute;left:22px;bottom:22px;right:22px;background:rgba(26,23,20,.5);backdrop-filter:blur(6px);color:#F7F3EC;padding:16px 18px;border-radius:2px;">
+            <div style="font:500 11px Inter;letter-spacing:.2em;text-transform:uppercase;color:#D9C3A3;">Render di progetto</div>
+            <div style="font:400 19px 'Cormorant Garamond',serif;margin-top:4px;">Bagno · Marmo, Rovere &amp; Colore</div>
+          </div>
+        </div>
+        <div style="position:absolute;right:-14px;top:-14px;background:#FDFCF9;border:1px solid rgba(140,106,67,.2);border-radius:2px;padding:14px 16px;box-shadow:0 14px 30px -16px rgba(26,23,20,.3);">
+          <div style="font:600 22px 'Cormorant Garamond',serif;color:#1A1714;">24–48h</div>
+          <div style="font:400 11px Inter;letter-spacing:.08em;text-transform:uppercase;color:#8C6A43;">prima risposta</div>
+        </div>
       </div>
     </div>
-    <div class="track-card">
-      <div class="track-icon" style="background:var(--calce-2);">📍</div>
+    <div data-reveal style="margin-top:clamp(44px,6vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:rgba(140,106,67,.18);border:1px solid rgba(140,106,67,.18);border-radius:3px;overflow:hidden;">
+      <div style="background:#F7F3EC;padding:24px 26px;">
+        <div style="font:300 clamp(30px,3.4vw,40px) 'Cormorant Garamond',serif;color:#1A1714;line-height:1;">2</div>
+        <div style="font:400 12.5px Inter;letter-spacing:.04em;color:rgba(26,23,20,.55);margin-top:8px;">modelli: Remote in tutta Italia, On-Site a Roma Sud e Castelli</div>
+      </div>
+      <div style="background:#F7F3EC;padding:24px 26px;">
+        <div style="font:300 clamp(30px,3.4vw,40px) 'Cormorant Garamond',serif;color:#1A1714;line-height:1;">6</div>
+        <div style="font:400 12.5px Inter;letter-spacing:.04em;color:rgba(26,23,20,.55);margin-top:8px;">fasi del Metodo DIMORA, ognuna firmata da te</div>
+      </div>
+      <div style="background:#F7F3EC;padding:24px 26px;">
+        <div style="font:300 clamp(30px,3.4vw,40px) 'Cormorant Garamond',serif;color:#1A1714;line-height:1;">24h</div>
+        <div style="font:400 12.5px Inter;letter-spacing:.04em;color:rgba(26,23,20,.55);margin-top:8px;">prima risposta sui servizi remoti</div>
+      </div>
+      <div style="background:#F7F3EC;padding:24px 26px;">
+        <div style="font:300 clamp(30px,3.4vw,40px) 'Cormorant Garamond',serif;color:#1A1714;line-height:1;">0%</div>
+        <div style="font:400 12.5px Inter;letter-spacing:.04em;color:rgba(26,23,20,.55);margin-top:8px;">commissioni sui lavori: consulenza indipendente</div>
+      </div>
+    </div>
+  </header>
+
+  <section style="background:#1A1714;color:#F7F3EC;">
+    <div style="max-width:1080px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+      <div data-reveal style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#B8966A;margin-bottom:30px;">Non siamo un'impresa edile</div>
+      <p data-reveal style="margin:0;font:300 clamp(26px,3.6vw,46px)/1.32 'Cormorant Garamond',serif;color:#F7F3EC;letter-spacing:-.01em;">Non vendiamo lavori. Vendiamo <em style="color:#B8966A;font-style:italic;">competenza, metodo e presidio.</em> Siamo dalla tua parte del tavolo: indipendenti, mai in commissione sui cantieri, con un solo interesse — che la tua ristrutturazione finisca bene.</p>
+      <div data-reveal style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
+        <div style="border-top:1px solid rgba(184,150,106,.34);padding-top:18px;">
+          <div style="font:400 21px 'Cormorant Garamond',serif;color:#F7F3EC;">Indipendenza</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(247,243,236,.6);margin-top:8px;">Non guadagniamo sui lavori. L’unico interesse è che finiscano bene.</div>
+        </div>
+        <div style="border-top:1px solid rgba(184,150,106,.34);padding-top:18px;">
+          <div style="font:400 21px 'Cormorant Garamond',serif;color:#F7F3EC;">Metodo</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(247,243,236,.6);margin-top:8px;">Sei fasi con checkpoint firmati: sai sempre dove sei e dove vanno i soldi.</div>
+        </div>
+        <div style="border-top:1px solid rgba(184,150,106,.34);padding-top:18px;">
+          <div style="font:400 21px 'Cormorant Garamond',serif;color:#F7F3EC;">Materiali</div>
+          <div style="font:300 14.5px/1.6 Inter;color:rgba(247,243,236,.6);margin-top:8px;">Vent’anni tra showroom e fornitori. Riconosco la qualità e il prezzo giusto.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+    <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:50px;">
       <div>
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--travertino);margin-bottom:6px;">Track B · On-Site · Castelli Romani + Roma Sud</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:8px;">In presenza, con presidio reale</h3>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;">Sopralluogo, coordinamento cantiere, regia completa. Enrico sul posto dalla prima matita alla consegna.</p>
-        <p style="font-size:11px;color:var(--travertino);">Audit · Bagno Presidio · Advisory · Assente · Risana</p>
+        <div style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#8C6A43;margin-bottom:18px;">Il catalogo</div>
+        <h2 style="margin:0;font:300 clamp(32px,4.6vw,56px)/1.06 'Cormorant Garamond',serif;letter-spacing:-.01em;">Due modi di lavorare,<br>un solo <em style="font-style:italic;color:#8C6A43;">metodo.</em></h2>
       </div>
+      <a href="servizi.html" style="font:500 14px Inter;color:#1A1714;text-decoration:none;border-bottom:1px solid #8C6A43;padding-bottom:4px;">Tutti i servizi →</a>
+    </div>
+    <div data-reveal style="display:flex;align-items:center;gap:14px;margin:0 0 22px;">
+      <span style="font:500 11px Inter;letter-spacing:.18em;text-transform:uppercase;color:#FDFCF9;background:#8C6A43;padding:5px 11px;border-radius:2px;">Remote · Nazionale</span>
+      <span style="height:1px;flex:1;background:rgba(140,106,67,.2);"></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;margin-bottom:52px;">
+      <a href="audit-digitale.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Audit Digitale</div>
+        <span style="font:600 9.5px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8C6A43;border:1px solid rgba(140,106,67,.4);padding:4px 7px;border-radius:2px;white-space:nowrap;">Start qui</span>
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">La seconda opinione esperta sul tuo preventivo, prima di firmare e prima di sbagliare.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">€199</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      <div style="font:400 12px Inter;color:rgba(26,23,20,.5);margin-top:8px;">+€79 secondo preventivo</div>
+    </a>
+      <a href="pre-acquisto.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Pre-Acquisto</div>
+        <span style="font:600 9.5px Inter;letter-spacing:.14em;text-transform:uppercase;color:#8C6A43;border:1px solid rgba(140,106,67,.4);padding:4px 7px;border-radius:2px;white-space:nowrap;">Start qui</span>
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Sai quanto ti costerà davvero, prima di fare l’offerta.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">€249</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      <div style="font:400 12px Inter;color:rgba(26,23,20,.5);margin-top:8px;">+€100/€80/€60/€50 per immobili aggiuntivi</div>
+    </a>
+      <a href="bagno-remote.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Bagno Remote</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Il tuo bagno progettato fino all’ultima piastrella. Interamente da remoto.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">Da €390</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+      <a href="living-remote.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Living Remote</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Cucina, soggiorno e parete attrezzata, progettati su misura.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">da €390</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+    </div>
+    <div data-reveal style="display:flex;align-items:center;gap:14px;margin:0 0 22px;">
+      <span style="font:500 11px Inter;letter-spacing:.18em;text-transform:uppercase;color:#1A1714;background:#E6DECE;padding:5px 11px;border-radius:2px;">On-Site · Roma Sud e Castelli Romani</span>
+      <span style="height:1px;flex:1;background:rgba(140,106,67,.2);"></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;">
+      <a href="bagno-onsite.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Bagno</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Il bagno seguito di persona, dal sopralluogo al collaudo.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">Da €590</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+      <a href="bagno-assente.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Bagno Assente</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Coordinamento e controllo costante, dal preventivo al collaudo.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">Da €990</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+      <a href="appartamento.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Appartamento</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">L’intera casa, progettata e presidiata dall’inizio alla fine.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">da €3.800</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+      <a href="appartamento-assente.html" class="dm-card" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:26px 24px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+        <div style="font:500 22px 'Cormorant Garamond',serif;color:#1A1714;">Appartamento Assente</div>
+        
+      </div>
+      <div style="font:300 14px/1.55 Inter;color:rgba(26,23,20,.6);margin-top:10px;flex:1;">Ristrutturi senza esserci. Ci sono io al posto tuo.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:16px;border-top:1px solid rgba(140,106,67,.16);">
+        <span style="font:500 16px Inter;color:#1A1714;">da €5.500</span>
+        <span style="font:500 13px Inter;color:#8C6A43;">Scopri →</span>
+      </div>
+      
+    </a>
+    </div>
+  </section>
+
+  <section style="background:#EFE9DC;">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+      <div data-reveal style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#8C6A43;margin-bottom:18px;">Il Metodo DIMORA · Progetti On-Site</div>
+      <h2 data-reveal style="margin:0 0 12px;font:300 clamp(32px,4.6vw,56px)/1.06 'Cormorant Garamond',serif;letter-spacing:-.01em;">Sei fasi, sei firme. <em style="font-style:italic;color:#8C6A43;">Mai al buio.</em></h2>
+      <p data-reveal style="margin:0 0 46px;max-width:600px;font:300 16px/1.6 Inter;color:rgba(26,23,20,.62);">È il presidio completo dei cantieri <strong style="font-weight:500;color:#1A1714;">On-Site</strong> a Roma Sud e nei Castelli Romani. Ogni passaggio si chiude con un checkpoint che approvi tu: sai sempre dove sono i tuoi soldi e a che punto è il progetto.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:rgba(140,106,67,.2);border:1px solid rgba(140,106,67,.2);border-radius:3px;overflow:hidden;">
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">01</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Ascolta</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Capisco spazio, esigenze e budget reale.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ Brief approvato</div>
+        </div>
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">02</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Disegna</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Traduco i bisogni in un progetto concreto.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ Progetto approvato</div>
+        </div>
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">03</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Valida</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Verifico che i numeri stiano in piedi.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ Budget approvato</div>
+        </div>
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">04</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Orchestra</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Organizzo imprese, fornitori e tempi.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ Piano approvato</div>
+        </div>
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">05</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Presiede</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Controllo avanzamento, qualità e spesa.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ SAL firmato per tranche</div>
+        </div>
+        <div data-reveal style="background:#EFE9DC;padding:24px 22px;display:flex;flex-direction:column;gap:10px;min-height:178px;">
+          <div style="font:500 12px Inter;letter-spacing:.14em;color:#8C6A43;">06</div>
+          <div style="font:500 23px 'Cormorant Garamond',serif;color:#1A1714;">Dimora</div>
+          <div style="font:300 13px/1.5 Inter;color:rgba(26,23,20,.58);flex:1;">Consegna e collaudo del risultato.</div>
+          <div style="font:500 11px Inter;letter-spacing:.04em;color:#8C6A43;border-top:1px solid rgba(140,106,67,.22);padding-top:9px;">✓ Dimora consegnata</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+  @keyframes floatBook { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @media (max-width: 880px) {
+    .gz-wrap { padding: 48px 22px !important; }
+    .gz-cols { flex-direction: column-reverse !important; gap: 40px !important; text-align: left; }
+    .gz-book { width: 100% !important; align-items: center !important; }
+    .gz-h2 { font-size: 30px !important; }
+    .gz-bullets { grid-template-columns: 1fr !important; }
+  }
+  .img-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;border:1px dashed rgba(196,161,107,.65);background:repeating-linear-gradient(135deg,rgba(196,161,107,.12) 0 12px,rgba(45,45,45,.06) 12px 24px);color:#7a6f63;font:500 9px/1.5 'Montserrat',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:10px;}
+  .gz-sez a { text-decoration: none; }
+</style>
+<div class="gz-sez">
+<!-- SEZIONE HOME · LEAD MAGNET GUIDA -->
+
+<section style="background:#2D2D2D; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:-140px; left:-120px; width:460px; height:460px; border-radius:50%; background:radial-gradient(circle, rgba(196,161,107,.14), transparent 68%);"></div>
+  <div style="position:absolute; top:0; left:0; right:0; height:3px; background:#C4A16B;"></div>
+
+  <div class="gz-wrap" style="position:relative; max-width:1120px; margin:0 auto; padding:72px 48px;">
+    <div class="gz-cols" style="display:flex; gap:64px; align-items:center; justify-content:space-between;">
+
+      <!-- testo -->
+      <div style="flex:1; min-width:0;">
+        <div style="font:600 9.5px/1 'Montserrat',sans-serif; letter-spacing:.3em; text-transform:uppercase; color:#C4A16B; margin-bottom:18px;">Risorsa gratuita · Guida</div>
+        <h2 class="gz-h2" style="margin:0; font:600 40px/1.08 'Playfair Display',serif; color:#F7F4EE; letter-spacing:-.4px;">Prima di ristrutturare il bagno, evita i 15 errori più costosi.</h2>
+        <p style="margin:18px 0 0; font:500 18px/1.42 'Cormorant Garamond',serif; color:#EBE2D2; max-width:480px;">Scarica gratis la guida professionale Dimorami: 24 pagine per progettare, scegliere e ristrutturare senza brutte sorprese.</p>
+
+        <div class="gz-bullets" style="margin:26px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:11px 28px; max-width:500px;">
+          <div style="display:flex; gap:10px; align-items:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#C4A16B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:500 11.5px/1.3 'Montserrat',sans-serif; color:rgba(247,244,238,.82);">I 15 errori da evitare</span></div>
+          <div style="display:flex; gap:10px; align-items:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#C4A16B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:500 11.5px/1.3 'Montserrat',sans-serif; color:rgba(247,244,238,.82);">Le 10 domande all'impresa</span></div>
+          <div style="display:flex; gap:10px; align-items:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#C4A16B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:500 11.5px/1.3 'Montserrat',sans-serif; color:rgba(247,244,238,.82);">La checklist del capitolato</span></div>
+          <div style="display:flex; gap:10px; align-items:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7" stroke="#C4A16B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:500 11.5px/1.3 'Montserrat',sans-serif; color:rgba(247,244,238,.82);">Il benchmark costi 2026</span></div>
+        </div>
+
+        <div style="margin-top:32px; display:flex; align-items:center; gap:22px; flex-wrap:wrap;">
+          <a href="guida-bagno.html" style="background:#C4A16B; color:#241c10; font:600 12px/1 'Montserrat',sans-serif; letter-spacing:.12em; text-transform:uppercase; padding:18px 30px;">Scarica la guida gratuita</a>
+          <span style="font:500 13px/1.4 'Cormorant Garamond',serif; font-style:italic; color:rgba(247,244,238,.66);">24 pagine · PDF · gratis</span>
+        </div>
+      </div>
+
+      <!-- libro -->
+      <div class="gz-book" style="flex:0 0 auto; width:280px; display:flex; flex-direction:column; align-items:center;">
+        <a href="guida-bagno.html" style="display:block; position:relative; width:258px; transform:rotate(-2.5deg);">
+          <div style="position:absolute; left:8%; right:8%; bottom:-26px; height:40px; background:radial-gradient(ellipse at center, rgba(0,0,0,.5), transparent 70%); filter:blur(7px);"></div>
+          <div style="position:relative; width:258px; height:365px; background:#241f18; box-shadow:0 30px 56px rgba(0,0,0,.55); animation:floatBook 6s ease-in-out infinite;">
+            <div style="position:absolute; left:0; top:0; bottom:0; width:11px; background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(255,255,255,.06)); z-index:4;"></div>
+            <div style="position:absolute; right:-5px; top:6px; bottom:6px; width:5px; background:repeating-linear-gradient(180deg,#efe9dd,#efe9dd 2px,#d4cbb9 2px,#d4cbb9 3px); border-radius:0 2px 2px 0;"></div>
+            <img src="assets/guida-copertina.jpg" alt="Copertina della guida — render bagno premium" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(28,22,16,.66) 0%, rgba(28,22,16,.2) 34%, rgba(20,15,10,.84) 100%);"></div>
+            <div style="position:absolute; top:18px; left:19px; right:17px; display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font:600 9px/1 'Playfair Display',serif; letter-spacing:.34em; color:#F7F4EE; padding-left:.34em;">DIMORAMI</div>
+                <div style="margin-top:4px; font:500 4px/1 'Montserrat',sans-serif; letter-spacing:.26em; text-transform:uppercase; color:#C4A16B;">Premium Renovation</div>
+              </div>
+              <span style="font:600 4.5px/1 'Montserrat',sans-serif; letter-spacing:.18em; text-transform:uppercase; color:#1c160f; background:#C4A16B; padding:3px 6px;">Gratuita</span>
+            </div>
+            <div style="position:absolute; left:19px; right:17px; bottom:20px;">
+              <div style="width:26px; height:2px; background:#C4A16B; margin-bottom:10px;"></div>
+              <div style="font:500 4.5px/1 'Montserrat',sans-serif; letter-spacing:.24em; text-transform:uppercase; color:#C4A16B; margin-bottom:7px;">La guida professionale Dimorami</div>
+              <div style="font:600 20px/1.04 'Playfair Display',serif; color:#F7F4EE;">Prima di<br>ristrutturare<br>il bagno</div>
+              <div style="margin-top:8px; font:500 9px/1.32 'Cormorant Garamond',serif; color:#EBE2D2;">Le 15 decisioni che possono farti risparmiare migliaia di euro.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
-
-<!-- NUMERI -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--calce-2);" data-reveal>
-  <div style="padding:48px 40px;background:var(--white);">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--travertino);line-height:1;">20<span style="font-size:36px;">+</span></div>
-    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin:6px 0 10px;">Anni di esperienza</div>
-    <p style="font-size:13px;color:var(--text-mid);line-height:1.6;">Ceramiche, arredo bagno, impianti, coordinamento. Conosciamo ogni voce di ogni preventivo.</p>
-  </div>
-  <div style="padding:48px 40px;background:var(--white);">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--travertino);line-height:1;">24<span style="font-size:36px;">h</span></div>
-    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin:6px 0 10px;">Consegna Audit Digitale</div>
-    <p style="font-size:13px;color:var(--text-mid);line-height:1.6;">Mandi il PDF oggi, ricevi report completo + video WhatsApp entro 24 ore lavorative.</p>
-  </div>
-  <div style="padding:48px 40px;background:var(--white);">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--travertino);line-height:1;">10</div>
-    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin:6px 0 10px;">Servizi su misura</div>
-    <p style="font-size:13px;color:var(--text-mid);line-height:1.6;">Dal singolo bagno remote alla ristrutturazione completa con presidio fisico quotidiano.</p>
-  </div>
-  <div style="padding:48px 40px;background:var(--white);">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--travertino);line-height:1;">6</div>
-    <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-low);margin:6px 0 10px;">Checkpoint firmati</div>
-    <p style="font-size:13px;color:var(--text-mid);line-height:1.6;">Ogni fase produce un documento firmato. Nessuna voce extra senza Change Order scritto.</p>
-  </div>
 </div>
 
-<!-- MATERIALI -->
-<div class="materiali-section">
-  <div class="materiali-img">
-    <img src="/img/campionario-materiali.jpg" alt="Campionario materiali ceramici e finiture selezionate da DIMORAMI">
-  </div>
-  <div class="materiali-content" data-reveal>
-    <p style="font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--trav-lt);margin-bottom:16px;">Selezione materiali</p>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.1;">Ogni materiale<br><em style="font-style:italic;color:var(--trav-lt);">ha una ragione.</em></h2>
-    <p style="font-size:15px;color:rgba(253,252,249,.5);line-height:1.82;margin-bottom:36px;">Ceramiche, rubinetterie, mobili bagno, pavimenti. La scelta dei materiali non è estetica — è tecnica. Il formato sbagliato, lo spessore errato, l'assorbimento incompatibile: errori che si pagano dopo. Noi li evitiamo prima.</p>
-    <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:36px;">
-      <div style="background:rgba(253,252,249,.04);padding:14px 20px;border-radius:2px;font-size:13px;color:rgba(253,252,249,.6);">Ceramiche grandi lastre · Maioliche · Gres porcellanato</div>
-      <div style="background:rgba(253,252,249,.04);padding:14px 20px;border-radius:2px;font-size:13px;color:rgba(253,252,249,.6);">Rubinetterie · Sanitari · Arredo bagno su misura</div>
-      <div style="background:rgba(253,252,249,.04);padding:14px 20px;border-radius:2px;font-size:13px;color:rgba(253,252,249,.6);">Pavimenti · Parquet · Rivestimenti decorativi</div>
-    </div>
-    <a href="/chi-sono.html" class="btn btn-white">Scopri chi è Enrico →</a>
-  </div>
-</div>
-
-<!-- LEAD MAGNET -->
-<section style="background:var(--calce-2);padding:var(--gap) var(--px);" data-reveal>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div>
-      <p class="section-label">Risorsa gratuita · DIMORAMI presenta</p>
-      <h2 class="section-title">Il Metodo<br><em>Bagno Senza Errori</em></h2>
-      <p style="font-size:16px;color:var(--text-mid);line-height:1.8;margin-top:20px;margin-bottom:36px;">La guida pratica con i 15 errori più comuni, le domande da fare prima di firmare e il checklist del capitolato. Gratuita, senza iscrizioni a pagamento.</p>
-      <a href="/bagno-senza-errori.html" class="btn btn-trav">Scarica gratis →</a>
-    </div>
-    <div style="background:var(--white);border-radius:4px;padding:40px;box-shadow:0 4px 24px rgba(26,23,20,.06);">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--travertino);margin-bottom:20px;">Cosa trovi dentro</p>
-      <div style="display:flex;flex-direction:column;gap:0;">
-        <div style="display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(140,106,67,.1);"><span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--trav-lt);min-width:24px;">01</span><span style="font-size:13px;color:var(--text-mid);">I 15 errori più comuni nel bagno ristrutturato male</span></div>
-        <div style="display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(140,106,67,.1);"><span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--trav-lt);min-width:24px;">02</span><span style="font-size:13px;color:var(--text-mid);">Le domande da fare all'impresa prima di firmare</span></div>
-        <div style="display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(140,106,67,.1);"><span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--trav-lt);min-width:24px;">03</span><span style="font-size:13px;color:var(--text-mid);">Il checklist voce per voce del capitolato bagno</span></div>
-        <div style="display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(140,106,67,.1);"><span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--trav-lt);min-width:24px;">04</span><span style="font-size:13px;color:var(--text-mid);">Benchmark di costo 2026 per Castelli Romani</span></div>
-        <div style="display:flex;gap:14px;align-items:center;padding:13px 0;"><span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--trav-lt);min-width:24px;">05</span><span style="font-size:13px;color:var(--text-mid);">I 5 checkpoint fondamentali durante il cantiere</span></div>
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
+    <div class="dm-2col" data-reveal style="display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,64px);align-items:center;">
+      <div style="aspect-ratio:4/5;border-radius:3px;background:linear-gradient(160deg,#2A2521,#1A1714);position:relative;overflow:hidden;box-shadow:0 28px 60px -34px rgba(26,23,20,.5);">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.9;"><svg viewBox="0 0 80 80" width="100%" height="100%" style="display:block"><circle cx="40" cy="40" r="34" fill="none" stroke="#B8966A" stroke-width="0.6" opacity="0.3"/><circle cx="40" cy="40" r="21" fill="none" stroke="#B8966A" stroke-width="0.6" opacity="0.3"/><line x1="40" y1="2" x2="40" y2="78" stroke="#B8966A" stroke-width="0.5" opacity="0.18"/><line x1="2" y1="40" x2="78" y2="40" stroke="#B8966A" stroke-width="0.5" opacity="0.18"/><path d="M26,14 H40 A26,26 0 0 1 40,66 H26 Z M34,24 H40 A16,16 0 0 1 40,56 H34 Z" fill="#E6DECE" fill-rule="evenodd"/></svg></div>
+        <div style="position:absolute;left:20px;bottom:18px;color:#F7F3EC;font:300 14px Inter;letter-spacing:.04em;">Ritratto del fondatore</div>
+      </div>
+      <div>
+        <div style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#8C6A43;margin-bottom:18px;">Chi c'è dietro</div>
+        <h2 style="margin:0 0 20px;font:300 clamp(28px,4vw,46px)/1.12 'Cormorant Garamond',serif;letter-spacing:-.01em;">Enrico Saggese,<br><em style="font-style:italic;color:#8C6A43;">progettista e presidio.</em></h2>
+        <p style="margin:0 0 16px;font:300 16px/1.7 Inter;color:rgba(26,23,20,.64);">Vent'anni sul campo, oggi responsabile showroom di una manifattura ceramica Mantovana con sede a Roma Sud. Conosco i materiali, i preventivi e gli errori che costano cari — e li intercetto prima che diventino i tuoi.</p>
+        <div style="font:300 14px/1.6 Inter;color:rgba(26,23,20,.5);border-left:2px solid #8C6A43;padding-left:16px;">Disclosure: ho una partnership preferenziale con Polis Manifatture Ceramiche SpA, dove lavoro come responsabile showroom. Trasparente, sempre dichiarata.</div>
+        <a href="chi-sono.html" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font:500 14px Inter;color:#1A1714;text-decoration:none;border-bottom:1px solid #8C6A43;padding-bottom:4px;">La mia storia →</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section style="background:var(--lava);padding:var(--gap) var(--px);" data-reveal>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div>
-      <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--trav-lt);margin-bottom:16px;">Inizia oggi</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,62px);font-weight:300;line-height:1.08;color:var(--white);margin-bottom:22px;">Prima di firmare<br>il preventivo,<br><em style="font-style:italic;color:var(--trav-lt);">parlami.</em></h2>
-      <p style="font-size:16px;color:rgba(253,252,249,.5);line-height:1.8;margin-bottom:38px;">Il Dimora Audit Digitale: €249, da remoto, in 24 ore. Mandi il PDF, lo analizzo io, ricevi risposta con report e video.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="/audit-digitale.html" class="btn btn-white">Invia il preventivo →</a>
-        <a href="/contatti.html" class="btn" style="color:rgba(253,252,249,.4);background:none;padding:14px 4px;">Prenota un sopralluogo →</a>
+  <section style="background:#1A1714;color:#F7F3EC;">
+    <div data-reveal style="max-width:840px;margin:0 auto;padding:clamp(64px,9vw,124px) clamp(20px,5vw,64px);text-align:center;">
+      <div style="font:500 12px Inter;letter-spacing:.24em;text-transform:uppercase;color:#B8966A;margin-bottom:24px;">Da dove vuoi iniziare?</div>
+      <h2 style="margin:0 0 22px;font:300 clamp(34px,5.4vw,64px)/1.06 'Cormorant Garamond',serif;letter-spacing:-.01em;">Dimmi lo spazio, lo stile<br>e <em style="font-style:italic;color:#B8966A;">cosa ti serve.</em></h2>
+      <p style="margin:0 auto 36px;max-width:480px;font:300 17px/1.65 Inter;color:rgba(247,243,236,.62);">L'Audit Digitale è la porta d'ingresso: <strong style="font-weight:500;color:#F7F3EC;">€199 di lancio</strong> (a breve €249), risposta in 24–48 ore, nessun impegno sui lavori.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="audit-digitale.html" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 30px;border-radius:2px;text-decoration:none;">Inizia con l'Audit Digitale <span style="color:#8C6A43;">→</span></a>
+        <a href="contatti.html" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:#F7F3EC;font:500 15px Inter;padding:18px 30px;border:1px solid rgba(247,243,236,.3);border-radius:2px;text-decoration:none;">Parliamo del progetto</a>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:2px;">
-      <div style="display:flex;border-radius:3px;overflow:hidden;">
-        <span style="background:rgba(253,252,249,.06);color:rgba(253,252,249,.35);font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:14px 16px;min-width:110px;display:flex;align-items:center;">Email</span>
-        <span style="background:rgba(253,252,249,.04);color:rgba(253,252,249,.65);font-size:13px;padding:14px 20px;flex:1;"><a href="mailto:enrico@dimorami.it" style="color:inherit;text-decoration:none;">enrico@dimorami.it</a></span>
+  </section>
+  <footer style="background:#161310;color:#F7F3EC;">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,5vw,64px) clamp(28px,4vw,40px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px;">
+        <div style="grid-column:span 1;min-width:200px;">
+          <div style="display:flex;align-items:center;">
+            <img src="assets/logo-footer.png" alt="DIMORAMI · Premium Renovation Advisory" style="height:88px;width:auto;display:block;">
+          </div>
+          <p style="font:300 14px/1.6 Inter;color:rgba(247,243,236,.5);margin:16px 0 0;max-width:240px;">Il tuo spazio diventa dimora. Premium Renovation Advisory.</p>
+        </div>
+        <div>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">Remote</div>
+          <a href="audit-digitale.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Audit Digitale</a>
+          <a href="pre-acquisto.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Pre-Acquisto</a>
+          <a href="bagno-remote.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno Remote</a>
+          <a href="living-remote.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Living Remote</a>
+        </div>
+        <div>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">On-Site</div>
+          <a href="bagno-onsite.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno</a>
+          <a href="bagno-assente.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Bagno Assente</a>
+          <a href="appartamento.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Appartamento</a>
+          <a href="appartamento-assente.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Appartamento Assente</a>
+        </div>
+        <div>
+          <div style="font:500 11px Inter;letter-spacing:.16em;text-transform:uppercase;color:#B8966A;margin-bottom:14px;">Pagine</div>
+          <a href="chi-sono.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Chi sono</a>
+          <a href="contatti.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Contatti</a>
+          <a href="guida-bagno.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Guida Bagno</a>
+          <a href="blog.html" style="display:block;font:300 14px Inter;color:rgba(247,243,236,.66);padding:5px 0;text-decoration:none;">Blog</a>
+        </div>
       </div>
-      <div style="display:flex;border-radius:3px;overflow:hidden;margin-top:2px;">
-        <span style="background:rgba(253,252,249,.06);color:rgba(253,252,249,.35);font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:14px 16px;min-width:110px;display:flex;align-items:center;">Instagram</span>
-        <span style="background:rgba(253,252,249,.04);color:rgba(253,252,249,.65);font-size:13px;padding:14px 20px;flex:1;"><a href="https://instagram.com/dimorami.it" style="color:inherit;text-decoration:none;">@dimorami.it</a></span>
-      </div>
-      <div style="display:flex;border-radius:3px;overflow:hidden;margin-top:2px;">
-        <span style="background:rgba(253,252,249,.06);color:rgba(253,252,249,.35);font-size:9px;letter-spacing:.16em;text-transform:uppercase;padding:14px 16px;min-width:110px;display:flex;align-items:center;">Area</span>
-        <span style="background:rgba(253,252,249,.04);color:rgba(253,252,249,.65);font-size:13px;padding:14px 20px;flex:1;">Castelli Romani · Roma Sud + Nazionale Remote</span>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid rgba(184,150,106,.2);font:300 12.5px Inter;color:rgba(247,243,236,.4);">
+        <span>© 2026 DIMORAMI · Enrico Saggese · Ariccia (RM) · <a href="https://www.iubenda.com/privacy-policy/55971286" target="_blank" rel="noopener" style="color:rgba(247,243,236,.4);">Privacy &amp; Cookie</a></span>
+        <span>Roma Sud · Castelli Romani · dimorami.it</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div>
-    <div class="footer-brand">DIMORAMI</div>
-    <p class="footer-tagline">Il tuo spazio diventa dimora.<br>Premium Renovation Advisory.<br>Enrico Saggese · Ariccia (RM).</p>
-  </div>
-  <div>
-    <p class="footer-col-title">Servizi Remote</p>
-    <ul class="footer-links">
-      <li><a href="/audit-digitale.html">Audit Digitale — €249</a></li>
-      <li><a href="/bagno-remote.html">Bagno Remote</a></li>
-      <li><a href="/pre-acquisto.html">Pre-Acquisto</a></li>
-      <li><a href="/living-remote.html">Living Remote</a></li>
-    </ul>
-    <p class="footer-col-title" style="margin-top:20px;">Servizi On-Site</p>
-    <ul class="footer-links">
-      <li><a href="/servizi.html#audit">Dimora Audit</a></li>
-      <li><a href="/servizi.html#bagno-presidio">Bagno Presidio</a></li>
-      <li><a href="/servizi.html#advisory">Advisory</a></li>
-    </ul>
-  </div>
-  <div>
-    <p class="footer-col-title">Pagine</p>
-    <ul class="footer-links">
-      <li><a href="/metodo.html">Il Metodo DIMORA</a></li>
-      <li><a href="/chi-sono.html">Chi sono</a></li>
-      <li><a href="/bagno-senza-errori.html">Bagno Senza Errori</a></li>
-      <li><a href="/blog/">Blog SEO</a></li>
-      <li><a href="/contatti.html">Contatti</a></li>
-    </ul>
-  </div>
-  <div>
-    <p class="footer-col-title">Contatti</p>
-    <ul class="footer-links">
-      <li><a href="mailto:enrico@dimorami.it">enrico@dimorami.it</a></li>
-      <li><a href="https://instagram.com/dimorami.it">@dimorami.it</a></li>
-      <li><a href="https://linkedin.com/in/enricosaggese">LinkedIn</a></li>
-    </ul>
-    <p class="footer-col-title" style="margin-top:20px;">Domini</p>
-    <ul class="footer-links">
-      <li><a href="https://bagnosenzaerrori.it">bagnosenzaerrori.it</a></li>
-      <li><a href="https://ristrutturazioneintelligente.it">ristrutturazioneintelligente.it</a></li>
-    </ul>
-  </div>
-</footer>
-<div class="footer-bar">
-  <p>© 2026 DIMORAMI · Enrico Saggese · P.IVA in corso di apertura</p>
-  <p>Ariccia (RM) · Castelli Romani · Roma Sud · dimorami.it</p>
-</div>
-
-<script>
-// Scroll reveal
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.08});
-document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
-
-// Prima/Dopo slider
-const container = document.getElementById('pdContainer');
-const before = document.getElementById('pdBefore');
-const after = document.getElementById('pdAfter');
-const handle = document.getElementById('pdHandle');
-let dragging = false;
-
-const pdPairs = [
-  { before: '/img/bagno1-prima.jpg', after: '/img/bagno1-dopo.jpg' },
-  { before: '/img/terrazzo-prima.jpg', after: '/img/terrazzo-dopo.jpg' }
-];
-
-function setPos(x) {
-  const r = container.getBoundingClientRect();
-  const pct = Math.max(5, Math.min(95, ((x - r.left) / r.width) * 100));
-  before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
-  handle.style.left = pct + '%';
-}
-
-function resetSlider() {
-  before.style.clipPath = 'inset(0 50% 0 0)';
-  handle.style.left = '50%';
-}
-
-function switchPD(idx, btn) {
-  document.querySelectorAll('.pd-tab').forEach(b => {
-    b.style.background = 'transparent'; b.style.color = 'var(--text-mid)';
-  });
-  btn.style.background = 'var(--travertino)'; btn.style.color = 'var(--white)';
-  after.src = pdPairs[idx].after;
-  before.src = pdPairs[idx].before;
-  resetSlider();
-}
-
-resetSlider();
-container.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
-window.addEventListener('mousemove', e => { if(dragging) setPos(e.clientX); });
-window.addEventListener('mouseup', () => { dragging = false; });
-container.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, {passive:true});
-window.addEventListener('touchmove', e => { if(dragging) setPos(e.touches[0].clientX); }, {passive:true});
-window.addEventListener('touchend', () => { dragging = false; });
-</script>
+  </footer><script>(function(){var b=document.getElementById('dm-burger'),m=document.getElementById('dm-mobilemenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');});}})();</script>
 </body>
 </html>
-                                                                                                                                                                                                              

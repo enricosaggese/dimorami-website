@@ -1,11 +1,12 @@
-# Netlify Redirects — DIMORAMI
-# Sintassi: /from  /to  status_code
-
-# Redirect domini satellite (configurare anche su Cloudflare)
-/bagno-senza-errori   /bagno-senza-errori.html   301
-/metodo-bagno         /bagno-senza-errori.html   301
-/audit                /audit-digitale.html        301
-/pre-acquisto         /servizi.html#pre-acquisto  301
-
-# Redirect www → apex (gestito da Cloudflare, qui per sicurezza)
-# https://www.dimorami.it/*  https://dimorami.it/:splat  301
+# Netlify Redirects — DIMORAMI (sito v2)
+/bagno-senza-errori        /guida-bagno.html               301
+/bagno-senza-errori.html   /guida-bagno.html               301
+/metodo-bagno              /guida-bagno.html               301
+/audit                     /audit-digitale.html            301
+/pre-acquisto              /pre-acquisto.html              301
+/caso-studio-bagno-onsite-mario-rossi.html  /caso-studio-bagno-onsite.html  301
+/caso-studio-bagno-remote-mario-rossi.html  /caso-studio-bagno-remote.html  301
+/blog                      /blog.html                      301
+/blog/*                    /blog.html                      301
+/metodo.html               /chi-sono.html#metodo           301
+/metodo                    /chi-sono.html#metodo           301
