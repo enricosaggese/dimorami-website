@@ -33,13 +33,15 @@ exports.handler = async function (event) {
       STATO: String(data.stato || ''),
       BUDGET: String(data.budget || ''),
     },
-    includeListIds: [3],           // lista "Guida Bagno"
-    templateId: 1,                 // modello predefinito doppio opt-in
-    redirectionUrl: 'https://dimorami.it/guida-confermata.html',
+    listIds: [3],                  // lista "Guida Bagno" (single opt-in: contatto confermato subito)
+    updateEnabled: true,           // se l'email esiste già, la aggiorna e la (ri)mette in lista
   };
 
   try {
-    const r = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
+    // Single opt-in: crea/aggiorna il contatto direttamente nella lista.
+    // L'ingresso in lista #3 fa scattare l'automazione Brevo che invia l'unica email con il PDF.
+    // Consenso newsletter documentato dalla checkbox obbligatoria del form (GDPR).
+    const r = await fetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers: {
         'api-key': process.env.BREVO_API_KEY,
