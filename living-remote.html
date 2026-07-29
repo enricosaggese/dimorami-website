@@ -2,6 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1CETCE3KPC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CETCE3KPC');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Living Remote · DIMORAMI</title>
 <meta name="description" content="Cucina, soggiorno e parete attrezzata, progettati su misura.">
@@ -9,6 +12,7 @@
 <meta property="og:title" content="Living Remote · DIMORAMI">
 <meta property="og:description" content="Cucina, soggiorno e parete attrezzata, progettati su misura.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://dimorami.it/assets/hero-bagno.jpg">
 <meta property="og:url" content="https://dimorami.it/living-remote.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -272,7 +276,72 @@
     <div data-reveal style="max-width:840px;margin:0 auto;padding:clamp(56px,7vw,104px) clamp(20px,5vw,64px);text-align:center;">
       <h2 style="margin:0 0 18px;font:300 clamp(30px,4.4vw,52px)/1.08 'Cormorant Garamond',serif;letter-spacing:-.01em;">Pronto per <em style="font-style:italic;color:#B8966A;">Living Remote?</em></h2>
       <p style="margin:0 auto 32px;max-width:440px;font:300 16px/1.6 Inter;color:rgba(247,243,236,.6);">Raccontami il tuo spazio. Ti rispondo entro 24 ore lavorative con i prossimi passi.</p>
-      <a href="contatti.html" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 32px;border-radius:2px;text-decoration:none;">Richiedi da €390 →</a>
+      <a href="#brief" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 32px;border-radius:2px;text-decoration:none;">Compila il brief →</a>
+    </div>
+  </section>
+
+  <section id="brief" style="background:#FDFCF9;border-top:1px solid rgba(140,106,67,.12);">
+    <div style="max-width:720px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,64px);">
+      <div style="font:500 11px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Compila il brief</div>
+      <h2 style="margin:0 0 8px;font:300 clamp(28px,3.8vw,44px)/1.1 'Cormorant Garamond',serif;color:#1A1714;">Raccontami il tuo living.</h2>
+      <p style="margin:0 0 38px;font:300 15px/1.65 Inter,sans-serif;color:rgba(26,23,20,.6);">Cucina, soggiorno, parete attrezzata — progettati su misura da remoto. Risposta entro 24h.</p>
+      <form name="brief-living-remote" method="POST" data-netlify="true" netlify-honeypot="azienda" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="brief-living-remote">
+        <p style="display:none;"><label>Non compilare <input name="azienda"></label></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;"><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Nome e cognome*</label>
+          <input type="text" name="nome" placeholder="Mario Rossi" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Email*</label>
+          <input type="email" name="email" placeholder="mario@email.it" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;"><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Telefono*</label>
+          <input type="tel" name="telefono" placeholder="+39 333 000 0000" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Città / provincia*</label>
+          <input type="text" name="citta" placeholder="Roma" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div></div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Ambienti da progettare</label>
+          <label style="display:flex;align-items:center;gap:8px;font:300 13px Inter,sans-serif;color:#1A1714;margin-bottom:8px;cursor:pointer;"><input type="checkbox" name="ambienti" value="Cucina" style="accent-color:#8C6A43;width:16px;height:16px;">Cucina</label><label style="display:flex;align-items:center;gap:8px;font:300 13px Inter,sans-serif;color:#1A1714;margin-bottom:8px;cursor:pointer;"><input type="checkbox" name="ambienti" value="Soggiorno" style="accent-color:#8C6A43;width:16px;height:16px;">Soggiorno</label><label style="display:flex;align-items:center;gap:8px;font:300 13px Inter,sans-serif;color:#1A1714;margin-bottom:8px;cursor:pointer;"><input type="checkbox" name="ambienti" value="Parete attrezzata" style="accent-color:#8C6A43;width:16px;height:16px;">Parete attrezzata</label><label style="display:flex;align-items:center;gap:8px;font:300 13px Inter,sans-serif;color:#1A1714;margin-bottom:8px;cursor:pointer;"><input type="checkbox" name="ambienti" value="Altro" style="accent-color:#8C6A43;width:16px;height:16px;">Altro</label>
+        </div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;"><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Superficie totale**</label>
+          <select name="superficie" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;appearance:none;-webkit-appearance:none;cursor:pointer;">
+            <option value="— seleziona —">— seleziona —</option>
+            <option value="Meno di 20 mq">Meno di 20 mq</option>
+            <option value="20–35 mq">20–35 mq</option>
+            <option value="35–50 mq">35–50 mq</option>
+            <option value="Oltre 50 mq">Oltre 50 mq</option>
+          </select>
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Budget indicativo**</label>
+          <select name="budget" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;appearance:none;-webkit-appearance:none;cursor:pointer;">
+            <option value="— seleziona —">— seleziona —</option>
+            <option value="Sotto €5.000">Sotto €5.000</option>
+            <option value="€5.000–10.000">€5.000–10.000</option>
+            <option value="€10.000–18.000">€10.000–18.000</option>
+            <option value="Oltre €18.000">Oltre €18.000</option>
+          </select>
+        </div></div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Stile preferito**</label>
+          <select name="stile" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;appearance:none;-webkit-appearance:none;cursor:pointer;">
+            <option value="— seleziona —">— seleziona —</option>
+            <option value="Moderno / Minimale">Moderno / Minimale</option>
+            <option value="Classico / Tradizionale">Classico / Tradizionale</option>
+            <option value="Mediterraneo">Mediterraneo</option>
+            <option value="Industrial / Raw">Industrial / Raw</option>
+            <option value="Non ho ancora le idee chiare">Non ho ancora le idee chiare</option>
+          </select>
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Planimetria o foto attuale</label>
+          <input type="file" name="planimetria" accept=".pdf,.jpg,.jpeg,.png" style="width:100%;padding:11px 16px;font:300 13px/1 Inter,sans-serif;color:rgba(26,23,20,.6);background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;cursor:pointer;">
+          <span style="display:block;margin-top:5px;font:300 11px Inter,sans-serif;color:rgba(26,23,20,.45);">PDF, JPG o PNG · max 10 MB</span>
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Note o riferimenti stilistici</label>
+          <textarea name="note" rows="3" placeholder="Es. «Cucina aperta sul soggiorno, piano lavoro in marmo» o link Pinterest" style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;resize:vertical;"></textarea>
+        </div>
+        <button type="submit" style="width:100%;padding:17px 28px;background:#1A1714;color:#F7F3EC;font:500 15px Inter,sans-serif;letter-spacing:.01em;border:none;border-radius:2px;cursor:pointer;margin-top:8px;">Compila il brief →</button>
+        <p style="margin:16px 0 0;font:300 12px/1.5 Inter,sans-serif;color:rgba(26,23,20,.45);">Inviando il brief accetti la <a href="https://www.iubenda.com/privacy-policy/55971286" target="_blank" rel="noopener" style="color:#8C6A43;">Privacy Policy</a>. I tuoi dati non vengono ceduti a terzi.</p>
+      </form>
     </div>
   </section>
   <footer style="background:#161310;color:#F7F3EC;">

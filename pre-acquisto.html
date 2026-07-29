@@ -2,6 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1CETCE3KPC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1CETCE3KPC');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pre-Acquisto · DIMORAMI</title>
 <meta name="description" content="Sai quanto ti costerà davvero, prima di fare l’offerta.">
@@ -9,6 +12,7 @@
 <meta property="og:title" content="Pre-Acquisto · DIMORAMI">
 <meta property="og:description" content="Sai quanto ti costerà davvero, prima di fare l’offerta.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://dimorami.it/assets/hero-bagno.jpg">
 <meta property="og:url" content="https://dimorami.it/pre-acquisto.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -246,7 +250,52 @@
     <div data-reveal style="max-width:840px;margin:0 auto;padding:clamp(56px,7vw,104px) clamp(20px,5vw,64px);text-align:center;">
       <h2 style="margin:0 0 18px;font:300 clamp(30px,4.4vw,52px)/1.08 'Cormorant Garamond',serif;letter-spacing:-.01em;">Pronto per <em style="font-style:italic;color:#B8966A;">Pre-Acquisto?</em></h2>
       <p style="margin:0 auto 32px;max-width:440px;font:300 16px/1.6 Inter;color:rgba(247,243,236,.6);">Raccontami il tuo spazio. Ti rispondo entro 24 ore lavorative con i prossimi passi.</p>
-      <a href="contatti.html" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 32px;border-radius:2px;text-decoration:none;">Richiedi €249 →</a>
+      <a href="#brief" style="display:inline-flex;align-items:center;gap:10px;background:#F7F3EC;color:#1A1714;font:500 15px Inter;padding:18px 32px;border-radius:2px;text-decoration:none;">Compila il brief · €249 →</a>
+    </div>
+  </section>
+
+  <section id="brief" style="background:#FDFCF9;border-top:1px solid rgba(140,106,67,.12);">
+    <div style="max-width:720px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,64px);">
+      <div style="font:500 11px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8C6A43;margin-bottom:14px;">Compila il brief</div>
+      <h2 style="margin:0 0 8px;font:300 clamp(28px,3.8vw,44px)/1.1 'Cormorant Garamond',serif;color:#1A1714;">Raccontami l'immobile.</h2>
+      <p style="margin:0 0 38px;font:300 15px/1.65 Inter,sans-serif;color:rgba(26,23,20,.6);">Ricevi la stima dei costi prima di fare l'offerta. Risposta entro 24–48 ore lavorative.</p>
+      <form name="brief-pre-acquisto" method="POST" data-netlify="true" netlify-honeypot="azienda">
+        <input type="hidden" name="form-name" value="brief-pre-acquisto">
+        <p style="display:none;"><label>Non compilare <input name="azienda"></label></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;"><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Nome e cognome*</label>
+          <input type="text" name="nome" placeholder="Mario Rossi" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Email*</label>
+          <input type="email" name="email" placeholder="mario@email.it" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;"><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Telefono*</label>
+          <input type="tel" name="telefono" placeholder="+39 333 000 0000" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Data prevista compromesso</label>
+          <input type="date" name="data_compromesso" style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div></div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Link all'annuncio o indirizzo immobile**</label>
+          <input type="text" name="immobile" placeholder="https://www.immobiliare.it/... oppure Via Roma 12, Frascati" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;">
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Budget massimo per la ristrutturazione**</label>
+          <select name="budget" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;appearance:none;-webkit-appearance:none;cursor:pointer;">
+            <option value="— seleziona —">— seleziona —</option>
+            <option value="Sotto €30.000">Sotto €30.000</option>
+            <option value="€30.000–60.000">€30.000–60.000</option>
+            <option value="€60.000–100.000">€60.000–100.000</option>
+            <option value="Oltre €100.000">Oltre €100.000</option>
+          </select>
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Scope dei lavori previsti**</label>
+          <textarea name="scope" rows="3" placeholder="Es. «Rifacimento completo di 2 bagni, cucina e impianti. Pavimenti in tutta la casa»" required style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;resize:vertical;"></textarea>
+        </div><div style="margin-bottom:20px;">
+          <label style="display:block;font:500 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8C6A43;margin-bottom:7px;">Note aggiuntive</label>
+          <textarea name="note" rows="2" style="width:100%;padding:13px 16px;font:300 14px/1 Inter,sans-serif;color:#1A1714;background:#fff;border:1px solid rgba(140,106,67,.3);border-radius:2px;box-sizing:border-box;resize:vertical;"></textarea>
+        </div>
+        <button type="submit" style="width:100%;padding:17px 28px;background:#1A1714;color:#F7F3EC;font:500 15px Inter,sans-serif;letter-spacing:.01em;border:none;border-radius:2px;cursor:pointer;margin-top:8px;">Compila il brief · €249 →</button>
+        <p style="margin:16px 0 0;font:300 12px/1.5 Inter,sans-serif;color:rgba(26,23,20,.45);">Inviando il brief accetti la <a href="https://www.iubenda.com/privacy-policy/55971286" target="_blank" rel="noopener" style="color:#8C6A43;">Privacy Policy</a>. I tuoi dati non vengono ceduti a terzi.</p>
+      </form>
     </div>
   </section>
   <footer style="background:#161310;color:#F7F3EC;">
