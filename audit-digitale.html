@@ -34,6 +34,8 @@
   .dm-card:hover{box-shadow:0 24px 48px -28px rgba(26,23,20,.4);transform:translateY(-3px);}
   .dm-mobilemenu{display:none;}
   .dm-mobilemenu.open{display:flex;}
+  #dm-mobilemenu a{text-decoration:none!important;}
+  #dm-mobilemenu a:not(.dm-mobile-cta){color:#1A1714!important;}
   .cs-page{display:none;}
   .cs-page.active{display:flex;animation:csTurn .55s cubic-bezier(.3,.7,.2,1) both;}
   @media(max-width:880px){
@@ -79,7 +81,7 @@
         <a href="guida-bagno.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Guida Bagno</a>
         <a href="contatti.html" style="font:300 30px 'Cormorant Garamond',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Contatti</a>
         <a href="blog.html" style="font:300 30px \'Cormorant Garamond\',serif;color:#1A1714;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(140,106,67,.14);">Blog</a>
-      <a href="audit-digitale.html" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC;font:500 15px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;justify-content:center;">Inizia con l'Audit Digitale →</a>
+      <a href="audit-digitale.html" class="dm-mobile-cta" style="margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:#1A1714;color:#F7F3EC!important;font:500 15px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;justify-content:center;">Inizia con l'Audit Digitale →</a>
   </div>
   <header style="background:#1A1714;color:#F7F3EC;">
     <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,5vw,64px) clamp(48px,7vw,84px);">
