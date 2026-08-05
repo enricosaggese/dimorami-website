@@ -102,6 +102,7 @@
           
           <a href="contatti.html" style="display:flex;align-items:center;justify-content:center;gap:9px;margin-top:22px;background:#F7F3EC;color:#1A1714;font:500 14.5px Inter;padding:16px 22px;border-radius:2px;text-decoration:none;">Richiedi questo servizio →</a>
           <div style="font:400 12px Inter;color:rgba(247,243,236,.45);margin-top:14px;text-align:center;">24–48 ore · esecuzione su prenotazione</div>
+          <button data-cal-link="dimorami/orientamento" data-cal-namespace="orientamento" data-cal-config='{"layout":"month_view"}' style="display:block;width:100%;margin-top:12px;background:transparent;border:none;font:400 12.5px Inter;color:#B8966A;text-decoration:underline;cursor:pointer;padding:0;">Non sei sicuro? Prenota una chiamata di orientamento · €39 →</button>
         </div>
       </div>
     </div>
@@ -354,5 +355,14 @@
       </div>
     </div>
   </footer><script>(function(){var b=document.getElementById('dm-burger'),m=document.getElementById('dm-mobilemenu');if(b&&m){b.addEventListener('click',function(){m.classList.toggle('open');});}})();</script>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "orientamento", {origin:"https://app.cal.com"});
+  Cal.ns.orientamento("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "audit-fisico", {origin:"https://app.cal.com"});
+  Cal.ns["audit-fisico"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "sopralluogo-onsite", {origin:"https://app.cal.com"});
+  Cal.ns["sopralluogo-onsite"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 </body>
 </html>

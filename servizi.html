@@ -93,6 +93,15 @@
       <button data-filter="onsite" class="dm-filter" style="font:500 13px Inter;letter-spacing:.02em;padding:11px 20px;border-radius:2px;cursor:pointer;border:1px solid rgba(26,23,20,.24);background:transparent;color:#1A1714;">On-Site · Roma Sud, Appia e Castelli Romani</button>
     </div>
   </header>
+    <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px) clamp(28px,4vw,44px);">
+    <div data-reveal style="background:#1A1714;border-radius:3px;padding:clamp(22px,3vw,30px) clamp(24px,3.5vw,34px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;">
+      <div style="max-width:560px;">
+        <div style="font:500 11px Inter;letter-spacing:.18em;text-transform:uppercase;color:#B8966A;margin-bottom:10px;">Non sai da dove iniziare?</div>
+        <div style="font:300 clamp(19px,2.2vw,24px)/1.35 'Cormorant Garamond',serif;color:#F7F3EC;">15 minuti al telefono, <em style="font-style:italic;color:#B8966A;">€39</em> — ti dico io qual è il servizio giusto per te, scalati dal servizio se procedi entro 7 giorni.</div>
+      </div>
+      <button data-cal-link="dimorami/orientamento" data-cal-namespace="orientamento" data-cal-config='{"layout":"month_view"}' style="display:inline-flex;align-items:center;gap:9px;background:#F7F3EC;color:#1A1714;font:500 14px Inter;padding:15px 26px;border-radius:2px;border:none;cursor:pointer;white-space:nowrap;">Prenota la chiamata di orientamento →</button>
+    </div>
+  </section>
   <section style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px) clamp(64px,9vw,120px);">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;">
       <a href="audit-digitale.html" class="dm-card dm-servcard" data-track="remote" data-reveal style="background:#FDFCF9;border:1px solid rgba(140,106,67,.18);border-radius:3px;padding:30px 28px 24px;display:flex;flex-direction:column;text-decoration:none;color:inherit;">
@@ -275,5 +284,14 @@
     cards.forEach(function(c){c.style.display=(f==='all'||c.getAttribute('data-track')===f)?'flex':'none';});
   });});
 })();</script>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "orientamento", {origin:"https://app.cal.com"});
+  Cal.ns.orientamento("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "audit-fisico", {origin:"https://app.cal.com"});
+  Cal.ns["audit-fisico"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "sopralluogo-onsite", {origin:"https://app.cal.com"});
+  Cal.ns["sopralluogo-onsite"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 </body>
 </html>
