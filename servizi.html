@@ -97,7 +97,7 @@
     <div data-reveal style="background:#1A1714;border-radius:3px;padding:clamp(22px,3vw,30px) clamp(24px,3.5vw,34px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;">
       <div style="max-width:560px;">
         <div style="font:500 11px Inter;letter-spacing:.18em;text-transform:uppercase;color:#B8966A;margin-bottom:10px;">Non sai da dove iniziare?</div>
-        <div style="font:300 clamp(19px,2.2vw,24px)/1.35 'Cormorant Garamond',serif;color:#F7F3EC;">15 minuti al telefono, <em style="font-style:italic;color:#B8966A;">€39</em> — ti dico io qual è il servizio giusto per te, scalati dal servizio se procedi entro 7 giorni.</div>
+        <div style="font:300 clamp(19px,2.2vw,24px)/1.35 'Cormorant Garamond',serif;color:#F7F3EC;">15 minuti in videochiamata WhatsApp, <em style="font-style:italic;color:#B8966A;">€39</em> — ti dico io qual è il servizio giusto per te, scalati dal servizio se procedi entro 7 giorni.</div>
       </div>
       <button data-cal-link="dimorami/orientamento" data-cal-namespace="orientamento" data-cal-config='{"layout":"month_view"}' style="display:inline-flex;align-items:center;gap:9px;background:#F7F3EC;color:#1A1714;font:500 14px Inter;padding:15px 26px;border-radius:2px;border:none;cursor:pointer;white-space:nowrap;">Prenota la chiamata di orientamento →</button>
     </div>
@@ -287,11 +287,11 @@
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "orientamento", {origin:"https://app.cal.com"});
-  Cal.ns.orientamento("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns.orientamento("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"},"dark":{"cal-brand":"#B8966A"}},"hideEventTypeDetails":false,"layout":"month_view"});
   Cal("init", "audit-fisico", {origin:"https://app.cal.com"});
-  Cal.ns["audit-fisico"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["audit-fisico"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"},"dark":{"cal-brand":"#B8966A"}},"hideEventTypeDetails":false,"layout":"month_view"});
   Cal("init", "sopralluogo-onsite", {origin:"https://app.cal.com"});
-  Cal.ns["sopralluogo-onsite"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns["sopralluogo-onsite"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"},"dark":{"cal-brand":"#B8966A"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 </body>
 </html>
