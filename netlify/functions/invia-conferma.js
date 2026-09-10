@@ -232,7 +232,7 @@ exports.handler = async function (event) {
       body: JSON.stringify({
         sender: { name: 'DIMORAMI — Enrico Saggese', email: 'enrico@dimorami.it' },
         to: [{ email, name: nome }],
-        subject: `DIMORAMI — Conferma richiesta ${servizio.nome}`,
+        subject: `DIMORAMI — Conferma richiesta ${servizio.nome} — ${nome}`,
         htmlContent: html,
       }),
     });
