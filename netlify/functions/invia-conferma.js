@@ -23,13 +23,11 @@
 // - Il parsing del payload Netlify è scritto in modo difensivo (submission.data annidato,
 //   oppure campi in cima all'oggetto) — verificato con una sottomissione reale il 10/09/2026:
 //   la forma è { payload: { form_name, data: {...campi...} } }, confermata nei log Netlify.
-// - La chiamata alle API CRM di Brevo (pipeline/deals) NON è stata verificata con una
-//   sottomissione reale in questa sessione (impossibilitato a consultare la documentazione
-//   Brevo aggiornata). Dopo il deploy, fare UNA sottomissione di prova e controllare i log
-//   della funzione (Functions → invia-conferma → Logs): se la trattativa non compare su
-//   Brevo CRM, il problema è quasi certamente qui (nome campo pipeline/stage diverso da
-//   quello atteso) — il resto della funzione (email cliente) non ne risente perché la
-//   chiamata CRM è isolata in un try/catch che non blocca l'invio email.
+// - Flusso email + CRM VERIFICATO END-TO-END con una sottomissione reale il 10/09/2026
+//   (form brief-pre-acquisto): email cliente arrivata con link PayPal corretto, trattativa
+//   "Dimora Pre-Acquisto — <nome>" creata su Brevo CRM in fase "Nuovo lead" con importo e
+//   contatto collegato corretti. Nota: l'endpoint POST /v3/crm/deals di Brevo risponde 200
+//   (non 201) in caso di successo — il codice controlla entrambi gli status.
 
 const SERVIZI = {
   'brief-audit-digitale': {
@@ -159,8 +157,8 @@ async function creaTrattativa({ servizio, nome, formName, fields, contactId, bre
     headers: brevoHeaders,
     body: JSON.stringify(dealBody),
   });
-  if (rDeal.status === 201) {
-    console.log('invia-conferma: trattativa creata su Brevo CRM per', formName, nome);
+  if (rDeal.status === 200 || rDeal.status === 201) {
+    console.log('invia-conferma: trattativa creata su Brevo CRM per', formName, nome, '—', await rDeal.text());
   } else {
     console.error('invia-conferma: creazione trattativa fallita', rDeal.status, await rDeal.text());
   }
