@@ -3,7 +3,7 @@
 //
 // Trigger: notifica "webhook in uscita" di Netlify Forms su "Any form submission"
 //          (Project configuration → Notifications → Add notification → HTTP POST request)
-// Invia solo per i 4 form Remote con checkbox Condizioni Generali; ignora tutti gli altri
+// Invia solo per i 4 form Remote con checkbox Condizioni Generali + inizio immediato; ignora tutti gli altri
 // (contatti, i 5 form On-Site) restituendo comunque 200 per non far apparire errori su Netlify.
 //
 // La chiave API va impostata su Netlify: Site settings → Environment variables → BREVO_API_KEY
@@ -192,7 +192,9 @@ exports.handler = async function (event) {
   const email = String(pick(fields, 'email')).trim();
   const nome = String(pick(fields, 'nome')).trim() || 'Cliente';
   const condizioniAccettate = pick(fields, 'condizioni_accettate');
-  const condizioniVersione = pick(fields, 'condizioni_versione') || 'v1 — 08/09/2026';
+  const condizioniVersione = pick(fields, 'condizioni_versione') || 'v2 — 16/09/2026';
+  const esecuzioneImmediata = pick(fields, 'esecuzione_immediata');
+  const recessoVersione = pick(fields, 'recesso_versione') || 'recesso v2 — 16/09/2026';
 
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     console.log('invia-conferma: email mancante o non valida nel payload, nessuna azione', { formName, hasEmail: !!email });
@@ -200,8 +202,33 @@ exports.handler = async function (event) {
   }
 
   if (!condizioniAccettate) {
-    console.log('invia-conferma: campo condizioni_accettate assente/vuoto per', formName, '— procedo comunque, ma segnalo in log per controllo manuale');
+    console.warn('invia-conferma: campo condizioni_accettate assente/vuoto per', formName,
+      '— l\'email NON dichiarerà l\'accettazione: da verificare manualmente prima di avviare il lavoro');
   }
+  if (!esecuzioneImmediata) {
+    console.warn('invia-conferma: campo esecuzione_immediata assente/vuoto per', formName,
+      '— il lavoro NON va avviato prima dei 14 giorni di recesso, salvo richiesta espressa scritta del cliente');
+  }
+
+  // Nota legale: questi due blocchi sono la conferma su supporto durevole (art. 51 c.7 Cod. Cons.)
+  // di ciò che il cliente ha effettivamente spuntato nel form. Se un campo non risulta nel payload,
+  // l'email NON deve affermare che il cliente ha accettato: chiede invece conferma esplicita.
+  const blocCondizioni = condizioniAccettate
+    ? `<p>Confermo di aver registrato la tua accettazione delle
+       <a href="https://dimorami.it/condizioni-generali.html">Condizioni Generali di Servizio DIMORAMI</a>
+       (${condizioniVersione}), comprensive del listino prezzi e dei limiti di responsabilità indicati ai §5–§11.</p>`
+    : `<p>Prima di avviare il lavoro ho bisogno della tua conferma scritta di accettazione delle
+       <a href="https://dimorami.it/condizioni-generali.html">Condizioni Generali di Servizio DIMORAMI</a>
+       (${condizioniVersione}): ti basta rispondere a questa email con «Accetto le Condizioni Generali».</p>`;
+
+  const blocRecesso = esecuzioneImmediata
+    ? `<p style="font-size:13px;color:#555;">Hai chiesto espressamente l'avvio immediato del servizio, senza attendere
+       i 14 giorni di recesso previsti dall'art. 52 del Codice del Consumo, prendendo atto che
+       <strong>a servizio completato il diritto di recesso viene meno</strong> (art. 59 lett. a). Se receda a lavoro avviato
+       ma non concluso, ti viene trattenuto solo l'importo proporzionato a quanto già svolto (art. 57). Riferimento: ${recessoVersione}.</p>`
+    : `<p style="font-size:13px;color:#555;">Non risulta la tua richiesta di avvio immediato: il lavoro parte dopo i 14 giorni
+       di recesso previsti dall'art. 52 del Codice del Consumo, e i tempi di consegna decorrono da lì. Se preferisci partire subito,
+       rispondi a questa email con «Chiedo l'avvio immediato del servizio e prendo atto che a servizio completato perdo il diritto di recesso».</p>`;
 
   const html = `
     <div style="font-family:Arial,sans-serif;color:#1A1714;max-width:560px;margin:0 auto;">
@@ -211,11 +238,10 @@ exports.handler = async function (event) {
       <p>Prezzo di riferimento: ${servizio.prezzoLabel}<br>
       Consegna prevista: ${servizio.consegna} dalla conferma del pagamento</p>
       ${blocPagamento(servizio)}
-      <p>Confermo di aver registrato la tua accettazione delle
-      <a href="https://dimorami.it/condizioni-generali.html">Condizioni Generali di Servizio DIMORAMI</a>
-      (${condizioniVersione}), comprensive del listino prezzi dei servizi Remote.</p>
+      ${blocCondizioni}
+      ${blocRecesso}
       <p>A presto,<br>Enrico Saggese — DIMORAMI</p>
-      <p style="font-size:12px;color:#888;margin-top:24px;">Questa email conferma la ricezione della tua richiesta e delle condizioni accettate il ${new Date().toLocaleDateString('it-IT')}. Per qualsiasi domanda: enrico@dimorami.it</p>
+      <p style="font-size:12px;color:#888;margin-top:24px;">Questa email conferma la ricezione della tua richiesta del ${new Date().toLocaleDateString('it-IT')} e riepiloga, su supporto durevole, quanto risulta dal modulo che hai inviato. Per qualsiasi domanda: enrico@dimorami.it</p>
     </div>`;
 
   const brevoHeaders = {
