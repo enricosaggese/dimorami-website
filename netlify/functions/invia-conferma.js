@@ -192,9 +192,9 @@ exports.handler = async function (event) {
   const email = String(pick(fields, 'email')).trim();
   const nome = String(pick(fields, 'nome')).trim() || 'Cliente';
   const condizioniAccettate = pick(fields, 'condizioni_accettate');
-  const condizioniVersione = pick(fields, 'condizioni_versione') || 'v2 — 16/09/2026';
+  const condizioniVersione = pick(fields, 'condizioni_versione') || 'v3 — 18/09/2026';
   const esecuzioneImmediata = pick(fields, 'esecuzione_immediata');
-  const recessoVersione = pick(fields, 'recesso_versione') || 'recesso v2 — 16/09/2026';
+  const recessoVersione = pick(fields, 'recesso_versione') || 'recesso v3 — 18/09/2026';
 
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     console.log('invia-conferma: email mancante o non valida nel payload, nessuna azione', { formName, hasEmail: !!email });
@@ -224,7 +224,7 @@ exports.handler = async function (event) {
   const blocRecesso = esecuzioneImmediata
     ? `<p style="font-size:13px;color:#555;">Hai chiesto espressamente l'avvio immediato del servizio, senza attendere
        i 14 giorni di recesso previsti dall'art. 52 del Codice del Consumo, prendendo atto che
-       <strong>a servizio completato il diritto di recesso viene meno</strong> (art. 59 lett. a). Se receda a lavoro avviato
+       <strong>a servizio completato il diritto di recesso viene meno</strong> (art. 59 lett. a). Se recedi a lavoro avviato
        ma non concluso, ti viene trattenuto solo l'importo proporzionato a quanto già svolto (art. 57). Riferimento: ${recessoVersione}.</p>`
     : `<p style="font-size:13px;color:#555;">Non risulta la tua richiesta di avvio immediato: il lavoro parte dopo i 14 giorni
        di recesso previsti dall'art. 52 del Codice del Consumo, e i tempi di consegna decorrono da lì. Se preferisci partire subito,
@@ -258,6 +258,9 @@ exports.handler = async function (event) {
       body: JSON.stringify({
         sender: { name: 'DIMORAMI — Enrico Saggese', email: 'enrico@dimorami.it' },
         to: [{ email, name: nome }],
+        // Copia di archivio: conserva prova di cosa il cliente ha effettivamente ricevuto
+        // (accettazione Condizioni e richiesta di avvio immediato, art. 51 c.7 Cod. Cons.).
+        bcc: [{ email: 'enrico@dimorami.it', name: 'DIMORAMI — archivio' }],
         subject: `DIMORAMI — Conferma richiesta ${servizio.nome} — ${nome}`,
         htmlContent: html,
       }),
