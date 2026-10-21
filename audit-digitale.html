@@ -380,5 +380,35 @@
   Cal("init", "sopralluogo-onsite", {origin:"https://app.cal.com"});
   Cal.ns["sopralluogo-onsite"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#8C6A43"},"dark":{"cal-brand":"#B8966A"}},"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
+<!-- WHATSAPP -->
+<a id="dm-wa" href="https://wa.me/393534135598?text=Ciao%20Enrico%2C%20sto%20guardando%20l%27Audit%20Digitale%20e%20avrei%20una%20domanda%20prima%20di%20procedere." target="_blank" rel="noopener"
+   aria-label="Scrivimi su WhatsApp"
+   style="position:fixed;right:20px;bottom:20px;z-index:900;display:flex;align-items:center;gap:9px;
+          padding:11px 16px 11px 13px;background:#8C6A43;color:#FFF;border-radius:40px;border:1px solid rgba(247,243,236,.28);
+          text-decoration:none;box-shadow:0 6px 22px rgba(23,23,23,.30);
+          font:400 13.5px/1 Inter,sans-serif;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease;">
+  <svg width="21" height="21" viewBox="0 0 24 24" fill="#FFF" aria-hidden="true" style="flex-shrink:0;">
+    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/>
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.92 6.45 17.5 2 12.04 2zm0 18.15h-.01c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.16.83.84-3.08-.2-.32a8.19 8.19 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24z"/>
+  </svg><span class="dm-wa-t">Scrivimi su WhatsApp</span></a>
+<style>
+  #dm-wa:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(23,23,23,.34);}
+  @media(max-width:640px){#dm-wa{right:16px;bottom:16px;padding:13px;}#dm-wa .dm-wa-t{display:none;}}
+  #dm-wa.dm-hide{opacity:0;pointer-events:none;transform:translateY(8px);}
+</style>
+<script>(function(){
+  var a=document.getElementById('dm-wa'); if(!a) return;
+  /* misura i click: senza questo non sai quale pagina genera contatti */
+  a.addEventListener('click',function(){
+    try{ if(typeof gtag==='function') gtag('event','whatsapp_click',{
+      event_category:'contatto', event_label:location.pathname, transport_type:'beacon'
+    }); }catch(e){}
+  });
+  /* su mobile il pulsante si leva di mezzo mentre si compila un form */
+  var f=document.querySelector('form');
+  if(f){ f.addEventListener('focusin',function(){a.classList.add('dm-hide');});
+          f.addEventListener('focusout',function(){setTimeout(function(){
+            if(!f.contains(document.activeElement)) a.classList.remove('dm-hide');},120);}); }
+})();</script>
 </body>
 </html>
