@@ -4,6 +4,7 @@
 /vai/remote         /bagno-remote.html?utm_source=email&utm_medium=sequenza&utm_campaign=guida-giorno4          302
 /vai/audit-fine     /audit-digitale.html?utm_source=email&utm_medium=sequenza&utm_campaign=guida-giorno9        302
 /vai/remote-fine    /bagno-remote.html?utm_source=email&utm_medium=sequenza&utm_campaign=guida-giorno9          302
+/vai/call           https://cal.com/dimorami/orientamento                                                       302
 /vai/guida          /guida-bagno.html?utm_source=email&utm_medium=sequenza&utm_campaign=guida-richiamo          302
 
 /bagno-senza-errori        /guida-bagno.html               301
