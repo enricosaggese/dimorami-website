@@ -18,3 +18,8 @@
 /blog/*                    /blog.html                      301
 /metodo.html               /chi-sono.html#metodo           301
 /metodo                    /chi-sono.html#metodo           301
+
+# Link tracciabili per i post social (GA4: utm)
+/s/audit    /audit-digitale.html?utm_source=social&utm_medium=organic&utm_campaign=post-audit      302
+/s/remote   /bagno-remote.html?utm_source=social&utm_medium=organic&utm_campaign=post-remote       302
+/s/pre      /pre-acquisto.html?utm_source=social&utm_medium=organic&utm_campaign=post-pre-acquisto 302
